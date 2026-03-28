@@ -1,0 +1,46 @@
+[
+  {
+    "id": "socotra",
+    "name": "Socotra",
+    "slug": "socotra",
+    "priceFrom": 1880,
+    "currency": "EUR",
+    "badge": "Voos incluidos",
+    "exclusive": true,
+    "image": "/assets/destinations/socotra.webp",
+    "ctaDestino": "Saber Mais"
+  },
+  {
+    "id": "uganda-ruanda",
+    "name": "Uganda/Ruanda",
+    "slug": "uganda-ruanda",
+    "priceFrom": 2950,
+    "currency": "EUR",
+    "badge": "Voos incluidos",
+    "exclusive": false,
+    "image": "/assets/destinations/uganda-ruanda.webp",
+    "ctaDestino": "Saber Mais"
+  },
+  {
+    "id": "marrocos",
+    "name": "Marrocos",
+    "slug": "marrocos",
+    "priceFrom": 870,
+    "currency": "EUR",
+    "badge": "Voos incluidos",
+    "exclusive": false,
+    "image": "/assets/destinations/marrocos.webp",
+    "ctaDestino": "Saber Mais"
+  },
+  {
+    "id": "tailandia",
+    "name": "Tailandia",
+    "slug": "tailandia",
+    "priceFrom": 1750,
+    "currency": "EUR",
+    "badge": "Voos incluidos",
+    "exclusive": false,
+    "image": "/assets/destinations/tailandia.webp",
+    "ctaDestino": "Saber Mais"
+  }
+]

@@ -1,0 +1,48 @@
+---
+// FR-08: FAQ com Schema FAQPage — dark accordion
+import faqData from '../data/faq.json';
+---
+
+<section id="faq" class="py-20 md:py-28" aria-label="Perguntas frequentes" style="background:#06060B;">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-12">
+      <span class="gold-line"></span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-text leading-tight tracking-tight">
+        Perguntas <span style="color:#F5A623;">Frequentes</span>
+      </h2>
+      <p class="mt-4 text-base" style="color:#8892A4;">
+        Tudo o que precisa de saber antes de reservar a sua viagem.
+      </p>
+    </div>
+
+    <div class="space-y-3">
+      {faqData.map((item: { id: number; question: string; answer: string }) => (
+        <details id={`faq-${item.id}`} class="reveal group glass-card overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-left font-bold text-base sm:text-lg transition-colors duration-200 list-none [&::-webkit-details-marker]:hidden" style="color:#F0F0F5;">
+            <span class="pr-4">{item.question}</span>
+            <svg class="w-5 h-5 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#4A5568;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-base leading-relaxed" style="color:#8892A4;border-top:1px solid rgba(255,255,255,0.06);">
+            <p class="pt-4">{item.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Schema FAQPage JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map((item: { question: string; answer: string }) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+})} />

@@ -1,0 +1,118 @@
+---
+// FR-10: Video Showcase — Instagram link + placeholder cards
+---
+
+<section id="videos" class="py-20 md:py-28" aria-label="Videos e aventuras" style="background:#0D0D14;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="reveal text-center mb-16">
+      <span class="gold-line"></span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-text leading-tight tracking-tight">
+        Veja as nossas <span style="color:#F5A623;">aventuras</span>
+      </h2>
+      <p class="mt-4 text-lg max-w-2xl mx-auto" style="color:#8892A4;">
+        Acompanhe as viagens no Instagram <a href="https://www.instagram.com/sairdacaixa.viagens/" target="_blank" rel="noopener noreferrer" class="font-bold transition-colors" style="color:#00D4AA;">@sairdacaixa.viagens</a>
+      </p>
+    </div>
+
+    <!-- Instagram post placeholders -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="reveal reveal-delay-1 glass-card glass-card-hover overflow-hidden group">
+        <div class="relative aspect-square">
+          <img
+            src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&q=80"
+            alt="Aventura em Socotra — VooViver"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            width="600"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(6,6,11,0.7) 0%, transparent 50%);"></div>
+          <!-- Play button overlay -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);">
+              <svg class="w-6 h-6 ml-0.5" style="color:#F0F0F5;" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4">
+            <span class="badge badge-teal">Socotra</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="reveal reveal-delay-2 glass-card glass-card-hover overflow-hidden group">
+        <div class="relative aspect-square">
+          <img
+            src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80"
+            alt="Safari no Uganda — VooViver"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            width="600"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(6,6,11,0.7) 0%, transparent 50%);"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);">
+              <svg class="w-6 h-6 ml-0.5" style="color:#F0F0F5;" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4">
+            <span class="badge badge-teal">Uganda</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="reveal reveal-delay-3 glass-card glass-card-hover overflow-hidden group">
+        <div class="relative aspect-square">
+          <img
+            src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&q=80"
+            alt="Marrocos — VooViver"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            width="600"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(6,6,11,0.7) 0%, transparent 50%);"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);">
+              <svg class="w-6 h-6 ml-0.5" style="color:#F0F0F5;" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4">
+            <span class="badge badge-teal">Marrocos</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal mt-10 text-center">
+      <a
+        href="https://www.instagram.com/sairdacaixa.viagens/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-sm transition-all duration-300 hover:scale-105"
+        style="background:linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);color:#fff;"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Seguir no Instagram
+      </a>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import TrustBar from '../components/TrustBar.astro';
+import Destinations from '../components/Destinations.astro';
+import PriceComparison from '../components/PriceComparison.astro';
+import Testimonials from '../components/Testimonials.astro';
+import VideoShowcase from '../components/VideoShowcase.astro';
+import AboutMaria from '../components/AboutMaria.astro';
+import ContactForm from '../components/ContactForm.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+
+const seoTitle = 'Maria José Sequeira — Viagens de Grupo desde 870 EUR | VooViver';
+const seoDescription = 'Descobre destinos únicos a preços imbatíveis com a consultora Maria José Sequeira da VooViver. Socotra, Uganda, Marrocos desde 870 EUR com voos incluídos. Pede o teu orçamento gratuito.';
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+  <main id="main-content">
+    <Hero />
+    <TrustBar />
+    <Destinations />
+    <PriceComparison />
+    <Testimonials />
+    <VideoShowcase />
+    <AboutMaria />
+    <ContactForm />
+    <FAQ />
+  </main>
+  <Footer />
+
+  <!-- Schema TravelAgency + TouristTrip -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "VooViver Viagens",
+      "url": "https://vooviver.com",
+      "employee": {
+        "@type": "Person",
+        "name": "Maria José Sequeira",
+        "jobTitle": "Consultora de Viagens"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Viagens de Grupo",
+        "itemListElement": [
+          {
+            "@type": "TouristTrip",
+            "name": "Socotra",
+            "touristType": "Adventure",
+            "offers": {
+              "@type": "Offer",
+              "price": "1880",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "TouristTrip",
+            "name": "Uganda/Ruanda",
+            "touristType": "Adventure",
+            "offers": {
+              "@type": "Offer",
+              "price": "2950",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "TouristTrip",
+            "name": "Marrocos",
+            "touristType": "Adventure",
+            "offers": {
+              "@type": "Offer",
+              "price": "870",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "TouristTrip",
+            "name": "Tailandia",
+            "touristType": "Adventure",
+            "offers": {
+              "@type": "Offer",
+              "price": "1750",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        ]
+      }
+    }
+  </script>
+</Layout>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "Os voos estao incluidos no preco?",
+    "answer": "Sim, todos os pacotes VooViver incluem voo, alojamento e guia local. O preco que ve e o preco final — sem surpresas."
+  },
+  {
+    "id": 2,
+    "question": "Posso pagar em prestacoes?",
+    "answer": "Sim, disponibilizamos pagamento em prestacoes sem juros. Contacte-me para definirmos o plano mais adequado ao seu orcamento."
+  },
+  {
+    "id": 3,
+    "question": "Qual o tamanho dos grupos?",
+    "answer": "Os nossos grupos sao pequenos, tipicamente entre 10 a 20 pessoas, para garantir uma experiencia mais personalizada e proxima."
+  },
+  {
+    "id": 4,
+    "question": "Preciso de visto para estes destinos?",
+    "answer": "Depende do destino e da sua nacionalidade. Eu trato de toda a informacao necessaria e ajudo-o com o processo de visto quando aplicavel."
+  },
+  {
+    "id": 5,
+    "question": "E seguro viajar para Socotra/Uganda?",
+    "answer": "Sim. Todos os nossos destinos sao cuidadosamente avaliados e trabalhamos com parceiros locais de confianca. Acompanhamento permanente durante toda a viagem."
+  },
+  {
+    "id": 6,
+    "question": "Como funciona o pedido de orcamento?",
+    "answer": "Preencha o formulario com os seus dados e o destino pretendido. Eu respondo em 24 horas com um orcamento personalizado e sem compromisso."
+  }
+]

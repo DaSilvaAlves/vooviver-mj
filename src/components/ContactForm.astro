@@ -1,0 +1,468 @@
+---
+// FR-07: Formulario Multi-Step — Dark glass theme
+import destinations from '../data/destinations.json';
+
+const endpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT || 'https://formspree.io/f/PLACEHOLDER';
+const destinationOptions = destinations.map((d: { name: string; slug: string }) => ({ name: d.name, slug: d.slug }));
+---
+
+<section id="formulario" class="py-20 md:py-28" aria-label="Pedir orcamento" style="background:#0D0D14;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-12">
+      <span class="gold-line"></span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-text leading-tight tracking-tight">
+        Pedir <span style="color:#F5A623;">Orcamento Gratuito</span>
+      </h2>
+      <p class="mt-4 text-lg max-w-xl mx-auto" style="color:#8892A4;">
+        Preencha o formulario e receba um orcamento personalizado em 24 horas. Sem compromisso.
+      </p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-center">
+      <!-- Formulario -->
+      <div class="w-full lg:max-w-xl">
+        <div id="contact-form-container" class="glass-card p-6 sm:p-8">
+          <!-- Progress bar -->
+          <div class="flex items-center justify-center gap-2 mb-8" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" aria-label="Progresso do formulario">
+            <div class="progress-step active" data-step="1">
+              <span class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-200" style="background:#00D4AA;color:#06060B;">1</span>
+              <span class="text-xs mt-1 font-bold hidden sm:block" style="color:#00D4AA;">Contacto</span>
+            </div>
+            <div class="w-8 sm:w-12 h-0.5 progress-line" data-line="1" style="background:rgba(255,255,255,0.1);"></div>
+            <div class="progress-step" data-step="2">
+              <span class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-200" style="background:rgba(255,255,255,0.1);color:#4A5568;">2</span>
+              <span class="text-xs mt-1 font-bold hidden sm:block" style="color:#4A5568;">Viagem</span>
+            </div>
+            <div class="w-8 sm:w-12 h-0.5 progress-line" data-line="2" style="background:rgba(255,255,255,0.1);"></div>
+            <div class="progress-step" data-step="3">
+              <span class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-200" style="background:rgba(255,255,255,0.1);color:#4A5568;">3</span>
+              <span class="text-xs mt-1 font-bold hidden sm:block" style="color:#4A5568;">Detalhes</span>
+            </div>
+          </div>
+
+          <form id="contact-form" action={endpoint} method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Pedido de orcamento completo" />
+
+            <!-- Passo 1: Contacto -->
+            <div id="step-1" class="form-step">
+              <div class="space-y-4">
+                <div>
+                  <label for="nome" class="block text-sm font-bold mb-1" style="color:#F0F0F5;">Nome <span style="color:#FF6B6B;">*</span></label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    aria-required="true"
+                    autocomplete="name"
+                    placeholder="O seu nome completo"
+                    class="input-dark"
+                  />
+                  <span class="field-error text-sm mt-1 hidden" role="alert" aria-live="polite" id="nome-error" style="color:#FF6B6B;">Campo obrigatorio</span>
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-bold mb-1" style="color:#F0F0F5;">Email <span style="color:#FF6B6B;">*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    aria-required="true"
+                    autocomplete="email"
+                    placeholder="o.seu@email.com"
+                    class="input-dark"
+                  />
+                  <span class="field-error text-sm mt-1 hidden" role="alert" aria-live="polite" id="email-error" style="color:#FF6B6B;">Introduza um email valido</span>
+                </div>
+                <div>
+                  <label for="telefone" class="block text-sm font-bold mb-1" style="color:#F0F0F5;">Telefone <span style="color:#FF6B6B;">*</span></label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    required
+                    aria-required="true"
+                    autocomplete="tel"
+                    placeholder="+351 912 345 678"
+                    class="input-dark"
+                  />
+                  <span class="field-error text-sm mt-1 hidden" role="alert" aria-live="polite" id="telefone-error" style="color:#FF6B6B;">Introduza um numero com pelo menos 9 digitos</span>
+                </div>
+              </div>
+              <div class="mt-6">
+                <button type="button" id="btn-next-1" class="btn-teal w-full">
+                  Seguinte &rarr;
+                </button>
+              </div>
+            </div>
+
+            <!-- Passo 2: Viagem -->
+            <div id="step-2" class="form-step hidden">
+              <div class="space-y-4">
+                <div>
+                  <label for="destino" class="block text-sm font-bold mb-1" style="color:#F0F0F5;">Destino pretendido</label>
+                  <select id="destino" name="destino" class="input-dark">
+                    <option value="">Escolha um destino</option>
+                    {destinationOptions.map((d: { name: string; slug: string }) => (
+                      <option value={d.slug}>{d.name}</option>
+                    ))}
+                    <option value="outro">Outro</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="datas" class="block text-sm font-bold mb-1" style="color:#F0F0F5;">Datas aproximadas</label>
+                  <input
+                    type="text"
+                    id="datas"
+                    name="datas"
+                    placeholder="Ex: Marco/Abril 2026"
+                    class="input-dark"
+                  />
+                </div>
+                <div>
+                  <label for="pessoas" class="block text-sm font-bold mb-1" style="color:#F0F0F5;">Numero de pessoas</label>
+                  <input
+                    type="number"
+                    id="pessoas"
+                    name="pessoas"
+                    min="1"
+                    value="1"
+                    class="input-dark"
+                  />
+                </div>
+              </div>
+              <div class="mt-6 flex gap-3">
+                <button type="button" id="btn-prev-2" class="btn-ghost flex-1">
+                  &larr; Anterior
+                </button>
+                <button type="button" id="btn-next-2" class="btn-teal flex-1">
+                  Seguinte &rarr;
+                </button>
+              </div>
+            </div>
+
+            <!-- Passo 3: Detalhes -->
+            <div id="step-3" class="form-step hidden">
+              <div class="space-y-4">
+                <div>
+                  <label for="observacoes" class="block text-sm font-bold mb-1" style="color:#F0F0F5;">Observacoes (opcional)</label>
+                  <textarea
+                    id="observacoes"
+                    name="observacoes"
+                    rows="3"
+                    placeholder="Algum pedido especial ou informacao relevante?"
+                    class="input-dark resize-y"
+                  ></textarea>
+                </div>
+                <div>
+                  <label for="como-conheceu" class="block text-sm font-bold mb-1" style="color:#F0F0F5;">Como conheceu a Maria?</label>
+                  <select id="como-conheceu" name="como_conheceu" class="input-dark">
+                    <option value="">Seleccione uma opcao</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="google">Google</option>
+                    <option value="referencia">Referencia de amigo/familiar</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                </div>
+                <div class="pt-2">
+                  <label class="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="rgpd-consent"
+                      name="rgpd_consent"
+                      required
+                      aria-required="true"
+                      class="mt-0.5 w-5 h-5 rounded shrink-0 accent-teal"
+                    />
+                    <span class="text-sm leading-relaxed" style="color:#8892A4;">
+                      Aceito a <a href="#" class="underline transition-colors" style="color:#F5A623;">Politica de Privacidade</a> e o tratamento dos meus dados para receber o orcamento solicitado. <span style="color:#FF6B6B;">*</span>
+                    </span>
+                  </label>
+                  <span class="field-error text-sm mt-1 hidden" role="alert" aria-live="polite" id="rgpd-error" style="color:#FF6B6B;">Deve aceitar a Politica de Privacidade para continuar</span>
+                </div>
+              </div>
+              <div class="mt-6 flex gap-3">
+                <button type="button" id="btn-prev-3" class="btn-ghost flex-1">
+                  &larr; Anterior
+                </button>
+                <button type="submit" id="btn-submit" class="btn-primary glow-gold flex-1">
+                  Pedir Orcamento
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Mensagem de sucesso -->
+          <div id="success-msg" class="hidden text-center py-8" role="alert">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background:rgba(0,212,170,0.15);">
+              <svg class="w-8 h-8" style="color:#00D4AA;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-black" style="color:#F0F0F5;">Obrigado!</h3>
+            <p class="mt-2 text-base" style="color:#8892A4;">A Maria responde em 24 horas.</p>
+          </div>
+
+          <!-- Mensagem de erro -->
+          <div id="error-msg" class="hidden text-center py-8" role="alert">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background:rgba(255,107,107,0.15);">
+              <svg class="w-8 h-8" style="color:#FF6B6B;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-black" style="color:#FF6B6B;">Erro ao enviar</h3>
+            <p class="mt-2 text-base" style="color:#8892A4;">
+              Tente novamente ou contacte pelo
+              <a href="https://wa.me/351933096770" target="_blank" rel="noopener noreferrer" class="underline" style="color:#25D366;">WhatsApp</a>.
+            </p>
+            <button type="button" id="btn-retry" class="mt-4 btn-teal">
+              Tentar Novamente
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp alternativo -->
+      <div class="w-full lg:max-w-xs">
+        <div class="glass-card p-6 text-center lg:sticky lg:top-8" style="border-color:rgba(37,211,102,0.2);">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center" style="background:rgba(37,211,102,0.15);">
+            <svg class="w-7 h-7" style="color:#25D366;" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-black" style="color:#F0F0F5;">Prefere falar directamente?</h3>
+          <p class="mt-2 text-sm" style="color:#8892A4;">Resposta rapida pelo WhatsApp</p>
+          <a
+            href="https://wa.me/351933096770"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 btn-whatsapp w-full"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Falar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ endpoint }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const container = document.getElementById('contact-form-container');
+    const successMsg = document.getElementById('success-msg');
+    const errorMsg = document.getElementById('error-msg');
+    const steps = document.querySelectorAll('.form-step');
+    const progressSteps = document.querySelectorAll('.progress-step');
+    const progressLines = document.querySelectorAll('.progress-line');
+    let currentStep = 1;
+
+    // Pre-select destination from URL param ?destino=
+    const urlParams = new URLSearchParams(window.location.search);
+    const destinoParam = urlParams.get('destino');
+    if (destinoParam) {
+      const destinoSelect = document.getElementById('destino');
+      if (destinoSelect) {
+        const options = destinoSelect.querySelectorAll('option');
+        for (const opt of options) {
+          if (opt.value === destinoParam) {
+            opt.selected = true;
+            break;
+          }
+        }
+      }
+    }
+
+    function showStep(n) {
+      steps.forEach((s, i) => {
+        s.classList.toggle('hidden', i !== n - 1);
+      });
+      currentStep = n;
+      updateProgress(n);
+    }
+
+    function updateProgress(n) {
+      progressSteps.forEach((ps, i) => {
+        const circle = ps.querySelector('span:first-child');
+        const label = ps.querySelector('span:last-child');
+        const stepNum = i + 1;
+        if (stepNum < n) {
+          // Completed step - gold
+          circle.style.background = '#F5A623';
+          circle.style.color = '#06060B';
+          if (label) { label.style.color = '#F5A623'; }
+        } else if (stepNum === n) {
+          // Active step - teal
+          circle.style.background = '#00D4AA';
+          circle.style.color = '#06060B';
+          if (label) { label.style.color = '#00D4AA'; }
+        } else {
+          // Inactive step
+          circle.style.background = 'rgba(255,255,255,0.1)';
+          circle.style.color = '#4A5568';
+          if (label) { label.style.color = '#4A5568'; }
+        }
+      });
+      progressLines.forEach((line, i) => {
+        if (i + 1 < n) {
+          line.style.background = '#F5A623';
+        } else {
+          line.style.background = 'rgba(255,255,255,0.1)';
+        }
+      });
+      // Update aria
+      const progressBar = container.querySelector('[role="progressbar"]');
+      if (progressBar) progressBar.setAttribute('aria-valuenow', String(n));
+    }
+
+    function validateStep1() {
+      let valid = true;
+      const nome = document.getElementById('nome');
+      const email = document.getElementById('email');
+      const telefone = document.getElementById('telefone');
+
+      // Nome
+      if (!nome.value.trim()) {
+        showError('nome');
+        valid = false;
+      } else {
+        hideError('nome');
+      }
+
+      // Email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+        showError('email');
+        valid = false;
+      } else {
+        hideError('email');
+      }
+
+      // Telefone
+      const telDigits = telefone.value.replace(/\D/g, '');
+      if (telDigits.length < 9) {
+        showError('telefone');
+        valid = false;
+      } else {
+        hideError('telefone');
+      }
+
+      return valid;
+    }
+
+    function showError(fieldId) {
+      const errorEl = document.getElementById(fieldId + '-error');
+      const input = document.getElementById(fieldId);
+      if (errorEl) errorEl.classList.remove('hidden');
+      if (input) {
+        input.style.borderColor = '#FF6B6B';
+        input.setAttribute('aria-describedby', fieldId + '-error');
+        input.setAttribute('aria-invalid', 'true');
+      }
+    }
+
+    function hideError(fieldId) {
+      const errorEl = document.getElementById(fieldId + '-error');
+      const input = document.getElementById(fieldId);
+      if (errorEl) errorEl.classList.add('hidden');
+      if (input) {
+        input.style.borderColor = 'rgba(255,255,255,0.1)';
+        input.removeAttribute('aria-describedby');
+        input.removeAttribute('aria-invalid');
+      }
+    }
+
+    // Submissao parcial no Passo 1
+    function submitPartial() {
+      const formData = new FormData();
+      formData.append('nome', document.getElementById('nome').value.trim());
+      formData.append('email', document.getElementById('email').value.trim());
+      formData.append('telefone', document.getElementById('telefone').value.trim());
+      formData.append('_subject', 'Lead parcial - Passo 1');
+
+      fetch(endpoint, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).catch(() => {});
+    }
+
+    // Botao Seguinte Passo 1
+    document.getElementById('btn-next-1').addEventListener('click', () => {
+      if (validateStep1()) {
+        submitPartial();
+        showStep(2);
+      }
+    });
+
+    // Botao Anterior Passo 2
+    document.getElementById('btn-prev-2').addEventListener('click', () => showStep(1));
+
+    // Botao Seguinte Passo 2
+    document.getElementById('btn-next-2').addEventListener('click', () => showStep(3));
+
+    // Botao Anterior Passo 3
+    document.getElementById('btn-prev-3').addEventListener('click', () => showStep(2));
+
+    // Submissao final
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Validar RGPD
+      const rgpd = document.getElementById('rgpd-consent');
+      if (!rgpd.checked) {
+        showError('rgpd');
+        return;
+      }
+      hideError('rgpd');
+
+      const submitBtn = document.getElementById('btn-submit');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'A enviar...';
+
+      try {
+        const formData = new FormData(form);
+        formData.set('_subject', 'Pedido de orcamento completo');
+
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.classList.add('hidden');
+          container.querySelector('[role="progressbar"]').classList.add('hidden');
+          successMsg.classList.remove('hidden');
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err) {
+        form.classList.add('hidden');
+        container.querySelector('[role="progressbar"]').classList.add('hidden');
+        errorMsg.classList.remove('hidden');
+      }
+    });
+
+    // Botao tentar novamente
+    document.getElementById('btn-retry').addEventListener('click', () => {
+      errorMsg.classList.add('hidden');
+      form.classList.remove('hidden');
+      container.querySelector('[role="progressbar"]').classList.remove('hidden');
+      const submitBtn = document.getElementById('btn-submit');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Pedir Orcamento';
+      showStep(3);
+    });
+
+    // Esconder erros ao digitar
+    ['nome', 'email', 'telefone'].forEach(id => {
+      document.getElementById(id).addEventListener('input', () => hideError(id));
+    });
+    document.getElementById('rgpd-consent').addEventListener('change', () => hideError('rgpd'));
+  });
+</script>

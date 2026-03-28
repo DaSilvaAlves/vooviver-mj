@@ -1,0 +1,123 @@
+---
+// FR-04: Comparação de Preços — Glass cards, não tabela aborrecida
+const comparisons = [
+  {
+    destino: 'Uganda/Ruanda',
+    vooviver: '2.950',
+    pintoLopes: '~9.995',
+    levaMe: 'N/A',
+    diferenca: '-70%',
+    tipo: 'percentagem',
+    saving: '7.045',
+  },
+  {
+    destino: 'Socotra',
+    vooviver: '1.880',
+    pintoLopes: 'N/A',
+    levaMe: 'N/A',
+    diferenca: 'Exclusivo PT',
+    tipo: 'exclusivo',
+    saving: null,
+  },
+  {
+    destino: 'Marrocos',
+    vooviver: '870',
+    pintoLopes: '~2.595',
+    levaMe: 'N/A',
+    diferenca: '-67%',
+    tipo: 'percentagem',
+    saving: '1.725',
+  },
+  {
+    destino: 'Tailândia',
+    vooviver: '1.750',
+    pintoLopes: '~4.000',
+    levaMe: '2.690',
+    diferenca: '-56%',
+    tipo: 'percentagem',
+    saving: '940',
+  },
+];
+---
+
+<section id="precos" class="py-20 md:py-28" aria-label="Comparação de preços" style="background:#0D0D14;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="reveal text-center mb-16">
+      <span style="display:block;width:48px;height:3px;background:linear-gradient(90deg,#F5A623,rgba(245,166,35,0.3));border-radius:2px;margin:0 auto 1rem;"></span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-text leading-tight tracking-tight">
+        O mesmo destino.<br/>
+        <span style="color:#F5A623;">Preço completamente diferente.</span>
+      </h2>
+      <p class="mt-4 text-lg max-w-2xl mx-auto" style="color:#8892A4;">
+        Com voos, alojamento e guia incluídos — a uma fracção do preço das grandes agências.
+      </p>
+    </div>
+
+    <!-- Comparison cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {comparisons.map((row, i) => (
+        <div class={`reveal reveal-delay-${i + 1} glass-card p-6 flex flex-col`}>
+          <!-- Destination name -->
+          <h3 class="font-black text-lg text-text mb-4">{row.destino}</h3>
+
+          <!-- VooViver price — hero -->
+          <div class="mb-4">
+            <p class="text-xs font-mono uppercase tracking-widest mb-1" style="color:#8892A4;">VooViver</p>
+            <p class="font-mono font-bold text-3xl leading-none" style="color:#F5A623;">
+              {row.vooviver}
+              <span class="text-lg">EUR</span>
+            </p>
+            <p class="text-xs mt-1" style="color:rgba(240,240,245,0.4);">/pessoa · voos + guia incluídos</p>
+          </div>
+
+          <!-- Competitor prices — smaller, strikethrough -->
+          <div class="flex-1 space-y-2 mb-4" style="border-top:1px solid rgba(255,255,255,0.06);padding-top:1rem;">
+            <div class="flex items-center justify-between">
+              <span class="text-xs" style="color:#4A5568;">Pinto Lopes</span>
+              {row.pintoLopes === 'N/A' ? (
+                <span class="text-xs" style="color:#4A5568;">—</span>
+              ) : (
+                <span class="text-xs line-through" style="color:#4A5568;">{row.pintoLopes} EUR</span>
+              )}
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs" style="color:#4A5568;">Leva-Me</span>
+              {row.levaMe === 'N/A' ? (
+                <span class="text-xs" style="color:#4A5568;">—</span>
+              ) : (
+                <span class="text-xs line-through" style="color:#4A5568;">{row.levaMe} EUR</span>
+              )}
+            </div>
+          </div>
+
+          <!-- Saving badge -->
+          <div class="mt-auto">
+            {row.tipo === 'exclusivo' ? (
+              <span class="badge badge-purple w-full justify-center">
+                {row.diferenca}
+              </span>
+            ) : (
+              <div class="space-y-2">
+                <span class="badge badge-coral w-full justify-center">
+                  Poupa {row.diferenca} vs Pinto Lopes
+                </span>
+                {row.saving && (
+                  <p class="text-center text-xs" style="color:#8892A4;">
+                    Poupança de até <span class="font-mono font-bold" style="color:#00D4AA;">{row.saving} EUR</span>
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="reveal mt-8 text-xs text-center" style="color:#4A5568;">
+      Todos os pacotes incluem voo, alojamento e guia. Preços por pessoa em quarto duplo. Preços de concorrentes obtidos via pesquisa pública.
+    </p>
+
+  </div>
+</section>
