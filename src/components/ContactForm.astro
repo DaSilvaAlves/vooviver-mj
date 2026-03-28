@@ -2,7 +2,7 @@
 // FR-07: Formulario Multi-Step — Dark glass theme
 import destinations from '../data/destinations.json';
 
-const endpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT || 'https://formspree.io/f/PLACEHOLDER';
+const endpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT || 'https://formsubmit.co/ajax/mjcsequeira@gmail.com';
 const destinationOptions = destinations.map((d: { name: string; slug: string }) => ({ name: d.name, slug: d.slug }));
 ---
 
@@ -41,7 +41,10 @@ const destinationOptions = destinations.map((d: { name: string; slug: string }) 
           </div>
 
           <form id="contact-form" action={endpoint} method="POST" novalidate>
-            <input type="hidden" name="_subject" value="Pedido de orcamento completo" />
+            <input type="hidden" name="_subject" value="Novo pedido de orcamento — Sair da Caixa Viagens" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style="display:none" />
 
             <!-- Passo 1: Contacto -->
             <div id="step-1" class="form-step">
