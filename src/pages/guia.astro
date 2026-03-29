@@ -1,0 +1,287 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import mariaPhoto from '../assets/maria-jose-sequeira.png';
+
+const seoTitle = 'Guia Grátis do Viajante — 52 Páginas | Sair da Caixa Viagens';
+const seoDescription = 'Descarrega grátis o guia de 52 páginas com tudo o que precisas para viajar melhor, mais barato e sem stress. Por Maria José Sequeira — Sair da Caixa Viagens.';
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="relative min-h-[85vh] flex items-center overflow-hidden" aria-label="Descarrega o Guia do Viajante">
+      <!-- Background -->
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse at 70% 30%, rgba(245,166,35,0.08) 0%, transparent 60%), radial-gradient(ellipse at 30% 70%, rgba(0,212,170,0.05) 0%, transparent 60%);"></div>
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22/><feColorMatrix type=%22saturate%22 values=%220%22/></filter><rect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22 opacity=%221%22/></svg>');background-size:200px 200px;"></div>
+      </div>
+
+      <div class="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+          <!-- Left: Copy + Form -->
+          <div class="flex-1 text-center lg:text-left">
+            <span class="badge badge-gold mb-6">GRÁTIS — 52 PÁGINAS</span>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight mb-6" style="color:#F0F0F5;">
+              O Guia que a Tua Agência
+              <span class="text-gradient-gold"> Nunca Te Deu</span>
+            </h1>
+
+            <p class="text-lg leading-relaxed mb-8" style="color:#8892A4; max-width:540px;">
+              52 páginas com tudo o que precisas de saber para viajar melhor, mais barato e sem stress. Sem truques. Sem cartão de crédito. Só o teu email.
+            </p>
+
+            <!-- Form -->
+            <form
+              id="guia-form"
+              action="https://formsubmit.co/mjcsequeira@gmail.com"
+              method="POST"
+              class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto lg:mx-0"
+            >
+              <input type="hidden" name="_subject" value="Novo pedido — Guia do Viajante" />
+              <input type="hidden" name="_next" value="https://vooviver-mj.vercel.app/guia/obrigado" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="box" />
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+              <div class="flex-1">
+                <label for="guia-nome" class="sr-only">O teu primeiro nome</label>
+                <input
+                  id="guia-nome"
+                  type="text"
+                  name="nome"
+                  placeholder="O teu primeiro nome"
+                  required
+                  class="input-dark w-full"
+                />
+              </div>
+              <div class="flex-1">
+                <label for="guia-email" class="sr-only">O teu melhor email</label>
+                <input
+                  id="guia-email"
+                  type="email"
+                  name="email"
+                  placeholder="O teu melhor email"
+                  required
+                  class="input-dark w-full"
+                />
+              </div>
+              <button type="submit" class="btn-primary whitespace-nowrap">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                QUERO O MEU GUIA
+              </button>
+            </form>
+
+            <p class="mt-4 text-xs" style="color:#4A5568;">
+              Recebemos o teu email com respeito. Zero spam, promessa da Maria.
+            </p>
+          </div>
+
+          <!-- Right: eBook Mockup -->
+          <div class="flex-shrink-0 relative">
+            <div class="relative w-64 sm:w-72 lg:w-80">
+              <!-- Book shadow -->
+              <div class="absolute inset-0 rounded-lg" style="background: linear-gradient(135deg, rgba(245,166,35,0.15), rgba(0,212,170,0.1)); filter: blur(40px); transform: scale(0.9);"></div>
+              <!-- Book cover -->
+              <div class="relative glass-card p-6 sm:p-8 rounded-xl" style="background: linear-gradient(145deg, rgba(18,18,26,0.95), rgba(6,6,11,0.98)); border: 1px solid rgba(245,166,35,0.2);">
+                <div class="text-center">
+                  <span class="badge badge-gold mb-4 text-[0.55rem]">GUIA GRÁTIS</span>
+                  <h2 class="text-lg sm:text-xl font-black leading-tight mb-3" style="color:#F0F0F5;">
+                    O Guia que a Tua Agência Nunca Te Deu
+                  </h2>
+                  <div class="gold-line mx-auto mb-3"></div>
+                  <p class="text-xs leading-relaxed mb-4" style="color:#8892A4;">
+                    Tudo o que precisas de saber para viajar melhor, mais barato e sem stress
+                  </p>
+                  <!-- Maria photo -->
+                  <div class="mx-auto w-16 h-16 rounded-full overflow-hidden mb-3" style="border: 2px solid rgba(245,166,35,0.4);">
+                    <img src={mariaPhoto.src} alt="Maria José Sequeira" class="w-full h-full object-cover" width="64" height="64" loading="lazy" />
+                  </div>
+                  <p class="text-xs font-bold" style="color:#F5A623;">Maria José Sequeira</p>
+                  <p class="text-[0.6rem] mt-1" style="color:#4A5568;">Sair da Caixa Viagens</p>
+                  <p class="text-[0.6rem] font-mono font-bold mt-3" style="color:#8892A4;">52 PÁGINAS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: O que vais aprender -->
+    <section class="py-16 md:py-24 reveal" style="background:#0D0D14;" aria-label="O que vais aprender">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl sm:text-3xl font-black mb-4" style="color:#F0F0F5;">O que vais aprender</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          {[
+            { icon: '💰', text: 'Porque pagas até 70% a mais nas tuas viagens — e como evitar' },
+            { icon: '📅', text: 'Quando reservar para poupar centenas de euros' },
+            { icon: '🌍', text: '10 destinos incríveis que custam menos do que pensas — com preços reais' },
+            { icon: '✅', text: 'Checklist completa para não esqueceres nada (pronta a imprimir)' },
+            { icon: '💳', text: 'A armadilha do câmbio no aeroporto — e como evitar' },
+            { icon: '🛡️', text: 'Seguro de viagem: o que ninguém te diz (e pode custar-te milhares)' },
+            { icon: '👥', text: 'Viagem solo vs grupo: a verdade que ninguém te conta' },
+            { icon: '❓', text: '7 perguntas que deves fazer ANTES de pagar a qualquer agência' },
+          ].map(item => (
+            <div class="flex items-start gap-3 p-4 rounded-xl glass-card">
+              <span class="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
+              <p class="text-sm leading-relaxed" style="color:#F0F0F5;">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Quem é a Maria -->
+    <section class="py-16 md:py-20 reveal" aria-label="Sobre a Maria">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-8 glass-card p-8 rounded-2xl">
+          <!-- Photo -->
+          <div class="flex-shrink-0">
+            <div class="w-28 h-28 rounded-full overflow-hidden" style="border: 3px solid rgba(245,166,35,0.4); box-shadow: 0 0 30px rgba(245,166,35,0.15);">
+              <img src={mariaPhoto.src} alt="Maria José Sequeira" class="w-full h-full object-cover" width="112" height="112" loading="lazy" />
+            </div>
+          </div>
+          <!-- Bio -->
+          <div class="text-center md:text-left">
+            <h2 class="text-xl font-black mb-1" style="color:#F0F0F5;">Maria José Sequeira</h2>
+            <p class="text-sm font-bold mb-3" style="color:#F5A623;">Consultora de Viagens de Grupo</p>
+            <p class="text-sm leading-relaxed" style="color:#8892A4;">
+              "Sou consultora de viagens de grupo e levo portugueses a destinos que 99% das agências não conhecem — a preços que não vão acreditar. Este guia tem tudo o que aprendi em anos a viajar e meses a organizar viagens para dezenas de portugueses. Não é teoria. É experiência real."
+            </p>
+            <div class="mt-4 flex items-center gap-4 justify-center md:justify-start">
+              <span class="badge badge-teal">Sair da Caixa Viagens</span>
+              <span class="badge" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:#8892A4;">RNAVT N.12366</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Números que chocam -->
+    <section class="py-16 md:py-20 reveal" style="background:#0D0D14;" aria-label="Comparação de preços">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl sm:text-3xl font-black mb-4" style="color:#F0F0F5;">Já comparaste preços?</h2>
+          <p class="text-sm" style="color:#8892A4;">Isto é o que vais aprender no Capítulo 1 do guia</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            { dest: 'Uganda/Ruanda', ours: '2.950', theirs: '9.995', save: '70' },
+            { dest: 'Marrocos', ours: '870', theirs: '2.595', save: '67' },
+            { dest: 'Tailândia', ours: '1.750', theirs: '~2.800', save: '38' },
+          ].map(item => (
+            <div class="glass-card p-6 rounded-xl text-center">
+              <p class="font-bold text-sm mb-3" style="color:#F0F0F5;">{item.dest}</p>
+              <p class="font-mono text-2xl font-bold" style="color:#F5A623;">{item.ours} <span class="text-xs">EUR</span></p>
+              <p class="text-xs mt-1 line-through" style="color:#4A5568;">Concorrência: {item.theirs} EUR</p>
+              <div class="mt-3">
+                <span class="badge badge-coral">-{item.save}%</span>
+              </div>
+              <p class="text-[0.65rem] mt-2" style="color:#8892A4;">Voos incluídos</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CTA Final -->
+    <section class="py-16 md:py-24 reveal" aria-label="Descarregar o guia">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black mb-4" style="color:#F0F0F5;">
+          52 páginas de valor real.
+          <span class="text-gradient-gold"> Zero custo.</span>
+        </h2>
+        <p class="text-sm leading-relaxed mb-8" style="color:#8892A4;">
+          Tudo o que precisas para viajar melhor, mais barato e sem stress — num único guia. Só precisas do teu email.
+        </p>
+
+        <!-- Repeated form -->
+        <form
+          action="https://formsubmit.co/mjcsequeira@gmail.com"
+          method="POST"
+          class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
+        >
+          <input type="hidden" name="_subject" value="Novo pedido — Guia do Viajante" />
+          <input type="hidden" name="_next" value="https://vooviver-mj.vercel.app/guia/obrigado" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="box" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="flex-1">
+            <label for="guia-nome-2" class="sr-only">O teu primeiro nome</label>
+            <input
+              id="guia-nome-2"
+              type="text"
+              name="nome"
+              placeholder="O teu primeiro nome"
+              required
+              class="input-dark w-full"
+            />
+          </div>
+          <div class="flex-1">
+            <label for="guia-email-2" class="sr-only">O teu melhor email</label>
+            <input
+              id="guia-email-2"
+              type="email"
+              name="email"
+              placeholder="O teu melhor email"
+              required
+              class="input-dark w-full"
+            />
+          </div>
+          <button type="submit" class="btn-primary whitespace-nowrap">
+            QUERO O MEU GUIA
+          </button>
+        </form>
+
+        <p class="mt-4 text-xs" style="color:#4A5568;">
+          Zero spam. Podes cancelar quando quiseres.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo" style="background:#030308;">
+    <div class="max-w-4xl mx-auto px-4 py-8 text-center">
+      <p class="text-sm font-bold" style="color:#F5A623;">Sair da Caixa Viagens</p>
+      <p class="text-xs mt-2" style="color:#8892A4;">Maria José Sequeira — Consultora de Viagens de Grupo</p>
+      <p class="text-xs mt-1" style="color:#4A5568;">Consultora associada VooViver — RNAVT N.12366</p>
+      <div class="mt-4 flex items-center justify-center gap-4">
+        <a href="/" class="text-xs underline" style="color:#8892A4;">Voltar ao site</a>
+        <a href="https://www.instagram.com/sairdacaixa.viagens/" target="_blank" rel="noopener noreferrer" class="text-xs underline" style="color:#8892A4;">Instagram</a>
+        <a href="https://wa.me/351933096770" target="_blank" rel="noopener noreferrer" class="text-xs underline" style="color:#8892A4;">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schema WebPage -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Guia Grátis do Viajante — Sair da Caixa Viagens",
+      "description": "Guia gratuito de 52 páginas com tudo o que precisas para viajar melhor, mais barato e sem stress.",
+      "author": {
+        "@type": "Person",
+        "name": "Maria José Sequeira"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  </script>
+</Layout>
