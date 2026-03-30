@@ -1,0 +1,2022 @@
+---
+import PrintLayout from '../layouts/PrintLayout.astro';
+import { Image } from 'astro:assets';
+import mariaPhoto from '../assets/maria-jose-sequeira.png';
+---
+
+<PrintLayout title="O Guia que a Tua Agência Nunca Te Deu — Sair da Caixa Viagens">
+
+  <!-- ============================================= -->
+  <!-- COVER PAGE                                    -->
+  <!-- ============================================= -->
+  <div class="cover-page page-break">
+    <span class="font-mono" style="font-size: 0.55rem; letter-spacing: 0.15em; color: var(--grey); text-transform: uppercase; margin-bottom: 2rem; display: block;">VIAJANTE COMUM &rarr; VIAJANTE INFORMADO</span>
+
+    <h1 style="font-size: 2.6rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; color: var(--white); max-width: 560px; margin-bottom: 0.3rem;">
+      O GUIA QUE A TUA AGÊNCIA
+    </h1>
+    <h1 style="font-size: 2.6rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; color: var(--gold); max-width: 560px; margin-bottom: 1.2rem;">
+      NUNCA TE DEU
+    </h1>
+
+    <p style="font-size: 1.05rem; color: var(--teal); max-width: 480px; line-height: 1.7; margin-bottom: 2.5rem; font-weight: 500;">
+      A Verdade Sobre Preços, Destinos e Tudo o Que Precisas de Saber Para Viajar Melhor, Mais Barato e Sem Stress
+    </p>
+
+    <span class="badge badge-gold" style="margin-bottom: 3rem; font-size: 0.65rem; padding: 0.4rem 1.2rem;">DOCUMENTO GRATUITO &mdash; 52 PÁGINAS</span>
+
+    <div style="display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1rem;">
+      <Image src={mariaPhoto} alt="Maria José Sequeira" class="avatar avatar-lg" width={120} height={120} />
+      <div style="text-align: left;">
+        <span style="font-weight: 800; font-size: 1.1rem; display: block; color: var(--gold);">Maria José C. Sequeira</span>
+        <span style="font-size: 0.85rem; color: var(--grey);">Consultora de Viagens de Grupo</span>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 0.8rem; margin-top: 2rem;">
+      <img src="/assets/logo/sair-da-caixa-transparent-512.png" alt="Sair da Caixa Viagens" style="height: 52px; width: auto;" />
+      <span style="font-weight: 700; font-size: 1.05rem; color: var(--white);">Sair da Caixa Viagens</span>
+    </div>
+
+    <p class="font-mono" style="font-size: 0.55rem; color: var(--grey2); margin-top: 2.5rem; letter-spacing: 0.06em;">
+      Associada VooViver &mdash; RNAVT N.12366
+    </p>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- INNER COVER — "Porque é que este guia existe" -->
+  <!-- ============================================= -->
+  <div class="content-section page-break" style="padding-top: 4rem; padding-bottom: 3rem;">
+    <div class="text-center" style="margin-bottom: 2rem;">
+      <Image src={mariaPhoto} alt="Maria José Sequeira" class="avatar avatar-xl" width={160} height={160} />
+    </div>
+
+    <h2 style="text-align: center; margin-bottom: 0.5rem;">Porque é que este guia existe</h2>
+    <div class="gold-line gold-line-center gold-line-wide"></div>
+
+    <p>Olá. Sou a Maria José e há 12 meses transformei a minha paixão por viajar numa profissão. Mas antes de ser consultora, fui viajante — e cometi todos os erros que este guia te vai ajudar a evitar.</p>
+
+    <p>Paguei demais. Reservei na altura errada. Levei coisas a mais. Não levei coisas essenciais. Fui enganada por "ofertas imperdíveis" que não eram nem ofertas nem imperdíveis.</p>
+
+    <p>Este guia tem tudo o que aprendi — nos anos a viajar e nos meses a organizar viagens para dezenas de portugueses. Não é teoria. É experiência real.</p>
+
+    <p>Usa-o. Partilha-o. E se algum dia quiseres viajar comigo para destinos que 99% das agências não conhecem, sabes onde me encontrar.</p>
+
+    <p style="margin-top: 2rem; margin-bottom: 0.3rem; color: var(--white); font-weight: 600;">Boas viagens,</p>
+    <p style="color: var(--gold); font-weight: 700; font-size: 1.05rem;">Maria José</p>
+
+    <div class="glass-card" style="margin-top: 2rem; text-align: center;">
+      <p style="margin-bottom: 0.4rem;"><strong>WhatsApp:</strong> +351 933 096 770</p>
+      <p style="margin-bottom: 0.4rem;"><strong>Instagram:</strong> @sairdacaixa.viagens</p>
+      <p style="margin-bottom: 0;"><strong>Website:</strong> vooviver-mj.vercel.app</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>2 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- TABLE OF CONTENTS                             -->
+  <!-- ============================================= -->
+  <div class="content-section page-break">
+    <h2 style="color: var(--gold); font-size: 1.8rem; margin-bottom: 0.5rem;">ÍNDICE</h2>
+    <div class="gold-line gold-line-wide"></div>
+
+    <ul class="toc">
+      <li class="toc-part">PARTE I &mdash; ANTES DE RESERVAR</li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 1.</strong> Como funcionam realmente os preços das viagens</span> <span class="toc-page">5</span></li>
+      <li class="toc-sub"><span class="toc-title">&middot; A cadeia de valor que ninguém te explica</span> <span class="toc-page">5</span></li>
+      <li class="toc-sub"><span class="toc-title">&middot; Porque é que "tudo incluído" nem sempre inclui tudo</span> <span class="toc-page">6</span></li>
+      <li class="toc-sub"><span class="toc-title">&middot; A verdade sobre os "descontos" e "últimas vagas"</span> <span class="toc-page">7</span></li>
+      <li class="toc-sub"><span class="toc-title">&middot; Como EU consigo preços 35-70% mais baixos</span> <span class="toc-page">8</span></li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 2.</strong> Quando reservar: o mito da "antecedência"</span> <span class="toc-page">9</span></li>
+      <li class="toc-sub"><span class="toc-title">&middot; A "regra dos 3 meses" e outros mitos</span> <span class="toc-page">9</span></li>
+      <li class="toc-sub"><span class="toc-title">&middot; Quando reservar por tipo de viagem</span> <span class="toc-page">10</span></li>
+      <li class="toc-sub"><span class="toc-title">&middot; As melhores e piores alturas para viajar</span> <span class="toc-page">11</span></li>
+      <li class="toc-sub"><span class="toc-title">&middot; O truque da flexibilidade</span> <span class="toc-page">12</span></li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 3.</strong> Viajar sozinho vs em grupo: a verdade nua</span> <span class="toc-page">13</span></li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 4.</strong> Como escolher uma agência (ou consultora) de confiança</span> <span class="toc-page">17</span></li>
+
+      <li class="toc-part">PARTE II &mdash; PREPARAR A VIAGEM</li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 5.</strong> Documentos: o checklist definitivo</span> <span class="toc-page">21</span></li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 6.</strong> Malas: a arte de levar só o essencial</span> <span class="toc-page">25</span></li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 7.</strong> Saúde e seguros: o que ninguém te diz</span> <span class="toc-page">29</span></li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 8.</strong> Dinheiro lá fora: cartões, câmbio e armadilhas</span> <span class="toc-page">33</span></li>
+
+      <li class="toc-part">PARTE III &mdash; DURANTE A VIAGEM</li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 9.</strong> Aeroportos e voos: truques de quem viaja a sério</span> <span class="toc-page">37</span></li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 10.</strong> No destino: segurança, cultura e respeito</span> <span class="toc-page">40</span></li>
+
+      <li class="toc-part">PARTE IV &mdash; DESTINOS QUE NÃO CONHECIAS</li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 11.</strong> 10 destinos incríveis que custam menos do que pensas</span> <span class="toc-page">43</span></li>
+      <li><span class="toc-title"><strong style="color: var(--gold);">Capítulo 12.</strong> O mapa da Maria: destinos que só eu ofereço</span> <span class="toc-page">48</span></li>
+
+      <li class="toc-part">EXTRAS</li>
+      <li><span class="toc-title">&middot; Checklist de viagem (destacável)</span> <span class="toc-page">50</span></li>
+      <li><span class="toc-title">&middot; Modelo de orçamento de viagem</span> <span class="toc-page">51</span></li>
+      <li><span class="toc-title">&middot; Os contactos da Maria</span> <span class="toc-page">52</span></li>
+    </ul>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>3 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- PART I DIVIDER                                -->
+  <!-- ============================================= -->
+  <div class="part-divider">
+    <span class="part-label">PARTE I</span>
+    <h2 class="part-title">ANTES DE RESERVAR</h2>
+    <div class="gold-line gold-line-center gold-line-wide mt-3"></div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 1                                     -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">01</span>
+    <span class="chapter-label">CAPÍTULO 1:</span>
+    <h2 class="chapter-title">COMO FUNCIONAM REALMENTE<br>OS PREÇOS DAS VIAGENS</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Há uma coisa que nenhuma agência de viagens te vai explicar: como é que o preço que pagas é formado. E compreendo — explicar isso seria como um restaurante mostrar-te a factura do fornecedor antes de te servir o prato. Mas tu mereces saber. Porque quando sabes como o sistema funciona, deixas de ser apanhado desprevenido.</p>
+
+    <p>Vou abrir o jogo.</p>
+
+    <h3 class="chapter-subtitle">A Cadeia de Valor Que Ninguém Te Explica</h3>
+
+    <p>Quando reservas uma viagem numa agência tradicional — daquelas que encontras nos centros comerciais — o preço que pagas passou por várias mãos antes de chegar a ti.</p>
+
+    <p>Funciona assim:</p>
+
+    <p><strong>Fornecedor local</strong> (hotel, guia, transporte) &rarr; <strong>Operador turístico</strong> (quem monta o pacote) &rarr; <strong>Agência de viagens</strong> (quem te vende) &rarr; <strong>Tu</strong> (quem paga tudo).</p>
+
+    <p>Cada intermediário nesta cadeia adiciona a sua margem. O operador adiciona 15-25% sobre o preço do fornecedor. A agência adiciona mais 10-20% sobre o preço do operador. E ainda há os custos de estrutura: a renda daquela loja no centro comercial, os salários dos funcionários, a publicidade, as luzes, o ar condicionado.</p>
+
+    <p>Quando reservas na agência do shopping, estás a pagar o aluguer do shopping. É isto não é uma crítica — é simplesmente como funciona o modelo de negócio. Mas é importante que saibas.</p>
+
+    <p>No meu caso, a cadeia é diferente. Eu trabalho directamente com operadores locais nos destinos. Não tenho loja física. Não tenho equipa de 20 pessoas. O meu escritório é o meu portátil é o meu telemóvel. E isso permite-me praticar preços que seriam impossíveis numa estrutura tradicional.</p>
+
+    <p>Não estou a dizer que as agências tradicionais são más. Estou a dizer que existe uma alternativa — é que mereces conhece-la.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>5 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Porque e Que "Tudo Incluido" Nem Sempre Inclui Tudo</h3>
+
+    <p>Esta é uma das armadilhas mais comuns no mercado de viagens. Vês um anúncio que diz "Pacote completo desde 899 EUR" e pensas que está tudo tratado. Depois, quando vais a ver a letra pequena, descobres que o "pacote completo" não inclui metade do que precisas.</p>
+
+    <p>Eis o que tipicamente NÃO está incluído nos chamados "pacotes completos":</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Custo escondido</th>
+          <th>Valor típico</th>
+          <th>O que te dizem</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Taxas de aeroporto</td><td class="price">50-150 EUR</td><td>"Sujeitas a confirmação"</td></tr>
+        <tr><td>Seguro de viagem</td><td class="price">40-80 EUR</td><td>"Opcional mas recomendado"</td></tr>
+        <tr><td>Transfers aeroporto-hotel</td><td class="price">30-100 EUR</td><td>"Não incluído" (letra pequena)</td></tr>
+        <tr><td>Refeições "não incluidas"</td><td class="price">200-400 EUR</td><td>"Meia pensao" (só pequeno-almoco e jantar)</td></tr>
+        <tr><td>Vistos</td><td class="price">30-100 EUR</td><td>"Responsabilidade do viajante"</td></tr>
+        <tr><td>Suplemento de quarto individual</td><td class="price">150-400 EUR</td><td>"Sob consulta"</td></tr>
+      </tbody>
+    </table>
+
+    <p>Soma tudo. Aquele pacote de 899 EUR pode chegar aos 1.300 ou 1.400 EUR quando finalmente tens o preço real. E nessa altura já estás envolvido emocionalmente, já contaste aos amigos, já pediste ferias no trabalho. E acabas por pagar.</p>
+
+    <p>Quando eu digo "voos incluídos", significa exactamente isso. Quando digo "tudo incluído", significa tudo — voos, alojamento, refeições, transfers, guias locais. Se há alguma coisa que não está incluída, digo-te exactamente o que e e quanto custa. Sem surpresas, sem letras pequenas, sem custos que aparecem na véspera da viagem.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>6 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">A Verdade Sobre os "Descontos" e "Últimas Vagas"</h3>
+
+    <p>Vou ser directa: 80% dos descontos que vês anunciados em viagens são fictícios. O mecanismo é simples e tão antigo quanto o comércio: inflacionar o preço original e depois anunciar um "desconto" que o traga de volta ao preço real.</p>
+
+    <p>Um pacote que devia custar 1.200 EUR e anunciado a 1.800 EUR durante dois meses. Depois aparece com um autocolante vermelho: "DESCONTO 30% — AGORA SÓ 1.260 EUR!" E tu pensas que estás a fazer um excelente negócio. Na verdade, estás a pagar o preço normal com 60 EUR a mais.</p>
+
+    <p>Quanto as "últimas vagas" — existem últimas vagas genuinas. Acontecem quando um grupo tem lugares por preencher é a data esta próxima. Nesse caso, o operador prefere vender mais barato do que perder dinheiro com lugares vazios. Mas isto representa uma pequena fracção do que e anunciado como "última vaga".</p>
+
+    <p>Há uma forma simples de distinguir: se o "desconto" ou a "última vaga" está disponível há mais de 48 horas, não é genuíno. Uma verdadeira última vaga desaparece em horas, não em semanas.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>7 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Como EU Consigo Preços 35-70% Mais Baixos</h3>
+
+    <p>Não tenho poderes mágicos nem acesso a preços secretos da internet. Tenho quatro coisas:</p>
+
+    <p><strong>Relação directa com operadores locais.</strong> Não passo por intermediários europeus. Falo directamente com quem organiza as coisas no terreno — o operador em Uganda, o guia em Marrocos, o logístico no Iemen. Cada intermediário que elimino da cadeia e 15-25% que sai do preço.</p>
+
+    <p><strong>Volume de grupo.</strong> Quando levo 15-25 pessoas, consigo negociar preços que um viajante individual nunca conseguiria. O hotel prefere encher 15 quartos de uma vez do que esperar por reservas individuais. O operador de safari prefere ter um grupo garantido do que depender de bookings esporádicos.</p>
+
+    <p><strong>Destinos não mainstream.</strong> Quando toda a gente quer ir a Cancun e as Maldivas, os preços inflacionam. Quando eu levo pessoas a Socotra, a Uganda, ao Quirguistão — destinos incríveis mas com menos procura — os preços reflectem isso. Menos procura significa menos inflação.</p>
+
+    <p><strong>Sem custos de estrutura.</strong> Não tenho loja, não tenho empregados, não pago renda de centro comercial. Isso permite-me ter margens mais baixas é ainda assim ter um negócio sustentável.</p>
+
+    <p>Para te dar um exemplo concreto, vou mostrar-te números reais:</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Viagem</th>
+          <th>O meu preço</th>
+          <th>Preço de referência (Pinto Lopes)</th>
+          <th>Diferença</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Uganda e Ruanda — Gorilas de Montanha</td><td class="price">2.950 EUR</td><td class="price-old">9.995 EUR</td><td style="color: var(--teal); font-weight: 700;">-70%</td></tr>
+        <tr><td>Marrocos Completo</td><td class="price">870 EUR</td><td class="price-old">2.595 EUR</td><td style="color: var(--teal); font-weight: 700;">-66%</td></tr>
+      </tbody>
+    </table>
+
+    <p>Estes não são preços inventados. São preços reais, verificáveis, com voos incluídos em ambos os casos. A diferença? A cadeia de valor que te expliquei no início deste capítulo.</p>
+
+    <div class="tip-box no-break">
+      <span class="tip-label">DICA DA MARIA</span>
+      <p>Antes de reservar qualquer viagem, pergunta sempre: "Este preço inclui voos, transfers, alojamento e refeições?" Se a resposta não for "sim, tudo", pede o orçamento completo por escrito.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>8 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 2                                     -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">02</span>
+    <span class="chapter-label">CAPÍTULO 2:</span>
+    <h2 class="chapter-title">QUANDO RESERVAR: O MITO<br>DA "ANTECEDÊNCIA"</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>"Reserva com antecedência para teres melhores preços." Já ouviste isto mil vezes. E em muitos casos, é verdade. Mas a realidade é mais complicada do que uma regra de ouro universal — e há situações em que reservar cedo pode até custar-te mais.</p>
+
+    <p>Vou explicar-te o que realmente interessa: quando reservar, dependendo do tipo de viagem que queres fazer.</p>
+
+    <h3 class="chapter-subtitle">A "Regra dos 3 Meses" e Outros Mitos</h3>
+
+    <p>O maior mito das viagens é que existe uma regra universal de antecedência. "Reserva 3 meses antes." "Reserva na Black Friday." "Reserva a uma terça-feira de madrugada." A internet está cheia destas "regras" — é a maioria não se aplica de forma consistente.</p>
+
+    <p>A verdade é que o timing ideal depende de três coisas: o destino, a época do ano é o tipo de viagem. Um voo low-cost para Barcelona em Outubro funciona de forma completamente diferente de uma viagem de grupo a Uganda em Fevereiro. Aplica-lhes a mesma "regra" e vais errar numa delas.</p>
+
+    <p>O que eu vejo na prática, depois de organizar dezenas de viagens, é que o preço de qualquer viagem segue uma curva. Comeca alto (quando as reservas abrem e só há disponibilidade), desce ao longo do tempo, atinge um ponto ideal (o sweet spot), e depois volta a subir quando a procura aumenta perto da data. O truque e saberes quando acontece esse sweet spot para cada tipo de viagem.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>9 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Quando Reservar Por Tipo de Viagem</h3>
+
+    <p>Esta tabela é o resultado de centenas de horas a monitorizar preços e disponibilidade. Imprime-a ou guarda-a no telemóvel.</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Tipo de Viagem</th>
+          <th>Melhor Altura para Reservar</th>
+          <th>Porque</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Viagem de grupo organizada</td><td>2-4 meses antes</td><td>Tempo para formar o grupo e garantir preços negociados</td></tr>
+        <tr><td>Voo low-cost Europa</td><td>6-8 semanas antes</td><td>Sweet spot entre disponibilidade e preço</td></tr>
+        <tr><td>Destino exótico (África, Ásia)</td><td>3-5 meses antes</td><td>Vistos, vacinas, logística complexa</td></tr>
+        <tr><td>Cruzeiros</td><td>6-12 meses antes</td><td>Cabines boas esgotam cedo, early booking com desconto real</td></tr>
+        <tr><td>Last minute real</td><td>Menos de 2 semanas</td><td>Só para quem tem flexibilidade total de datas e destino</td></tr>
+      </tbody>
+    </table>
+
+    <p>Nota sobre viagens de grupo: quando eu abro inscrições para um destino, o preço é garantido a partir do momento em que reservas o teu lugar. Não sobe, não desce, não muda. Isto da-te previsibilidade total — sabes exactamente quanto vais gastar desde o primeiro dia.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>10 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">As Melhores e Piores Alturas Para Viajar</h3>
+
+    <p>Há uma expressão no mundo das viagens que vale ouro: shoulder season. Em português, traduzimos literalmente como "época do ombro" — mas o conceito é simples. E aquele período que fica entre a época alta (cara, cheia, quente) é a época baixa (barata mas com razões para isso — chuva, frio, etc.).</p>
+
+    <p>A shoulder season é o segredo mais bem guardado dos viajantes experientes. Tens bom tempo, menos turistas, preços mais baixos é uma experiência muito mais autêntica.</p>
+
+    <p><strong>Quando viajar para os destinos mais populares:</strong></p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Época Alta (evitar)</th>
+          <th>Shoulder Season (ideal)</th>
+          <th>Época Baixa (com cautela)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Marrocos</td><td>Jul-Ago (calor extremo)</td><td style="color: var(--teal);">Out-Nov, Mar-Abr</td><td>Dez-Fev (fresco)</td></tr>
+        <tr><td>Tailândia</td><td>Dez-Fev (preços altos)</td><td style="color: var(--teal);">Mar-Mai, Out-Nov</td><td>Jun-Set (chuva)</td></tr>
+        <tr><td>Uganda/Ruanda</td><td>Jul-Ago, Dez-Jan (alta)</td><td style="color: var(--teal);">Fev-Mar, Jun, Set-Out</td><td>Abr-Mai (chuva forte)</td></tr>
+        <tr><td>Socotra</td><td>— (janela limitada)</td><td style="color: var(--teal);">Out-Abr (única época possível)</td><td>Mai-Set (monsao)</td></tr>
+      </tbody>
+    </table>
+
+    <p>Vou dar-te um exemplo concreto: Marrocos em Outubro custa cerca de 40% menos do que Marrocos em Abril, com temperaturas igualmente agradáveis é muito menos turistas. O mesmo destino, a mesma experiência, quase metade do preço. A única diferença é o mês no calendario.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>11 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">O Truque da Flexibilidade</h3>
+
+    <p>Se eu pudesse dar-te apenas um conselho sobre como poupar dinheiro em viagens, seria este: se flexível nas datas. Tres dias de diferença na data de partida podem significar 200 a 500 EUR de diferença no preço dos voos.</p>
+
+    <p>Porquês? Porque os algoritmos das companhias aereas ajustam preços com base na procura. Uma terça ou quarta-feira e quase sempre mais barata do que uma sexta ou sábado. E voar de madrugada (sim, aqueles voos das 6h da manhã que ninguém quer) pode poupar-te uma pequena fortuna.</p>
+
+    <p>Outra forma de poupar: aeroportos alternativos. Se moras no Porto, verifica sempre os preços a partir de Vigo — as companhias low-cost operam lá com preços agressivos. Se moras no Algarve, Sevilha pode ser mais barato que Lisboa. E se moras em Lisboa, verifica sempre Porto e Faro.</p>
+
+    <p>O Google Flights Explore é uma ferramenta gratuita que quase ninguém utiliza. Permite-te colocar "Portugal" como origem e "qualquer destino" como chegada, e mostra-te um mapa do mundo com os preços mais baixos para cada destino. Podes filtrar por mês, por número de escalas, por duração. E de longe a melhor ferramenta gratuita para encontrar voos baratos.</p>
+
+    <div class="tip-box no-break">
+      <span class="tip-label">DICA DA MARIA</span>
+      <p>Se tens flexibilidade de datas, envia-me mensagem com "Quero ir a [destino] entre [mês X] e [mês Y]" — eu encontro a melhor janela de preço para ti.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>12 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 3                                     -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">03</span>
+    <span class="chapter-label">CAPÍTULO 3:</span>
+    <h2 class="chapter-title">VIAJAR SOZINHO VS EM GRUPO:<br>A VERDADE NUA</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Vou ser honesta: como organizadora de viagens de grupo, tenho obviamente um interesse em que viajes em grupo. Mas o meu compromisso contigo neste guia é a honestidade. Por isso vou dar-te os factos — os bons e os maus — de ambas as opções. E depois decides tu.</p>
+
+    <h3 class="chapter-subtitle">Viajar Sozinho — O Bom, O Mau e O Que Ninguém Conta</h3>
+
+    <p><strong>O bom é real.</strong> Quando viajas sozinho, tens liberdade total. Acordas quando queres, comes onde queres, ficas mais tempo onde te apetece e sais quando te fartares. O teu ritmo é o único que importa. E há algo de profundamente transformador em navegar um país desconhecido com as tuas próprias decisões.</p>
+
+    <p><strong>O mau também é real.</strong> Viajar sozinho é significativamente mais caro. O suplemento de quarto individual acrescenta 30-50% ao custo do alojamento. Os taxis, os guias, os barcos — tudo o que dividirias com alguém, pagas sozinho. É a logística é toda tua: reservas, transfers, horarios, roteiros, imprevistos. Se alguma coisa corre mal, es tu que resolves.</p>
+
+    <p><strong>O que ninguém conta.</strong> Há uma coisa sobre viajar sozinho em destinos remotos que raramente se discute: a solidão pesa. Não estou a falar de uma semana em Bali com outros mochileiros em hostels — falo de destinos como Uganda, Socotra, o interior de Marrocos. Sítios onde não há muitos turistas, onde não falas a língua, onde podes passar um dia inteiro sem cruzar-te com outro europeu.</p>
+
+    <p>E há a questão da segurança. Um viajante sozinho é mais vulnerável — é uma realidade, não é um argumento de venda. Especialmente em destinos menos turísticos, em cidades que não conheces, em situações que não controlas. Não é para assustar — é para ser realista.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>13 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Viajar em Grupo — Não é O Que Pensas</h3>
+
+    <p>Quando digo "viagem de grupo", sei exactamente o que te vem a cabeca: um autocarro com 50 pessoas, um guia com megafone e bandeira, paragens de 15 minutos em sítios turísticos para tirar uma foto e seguir. Isso existiu. Nos anos 90. E morreu. E ainda bem.</p>
+
+    <p>As viagens de grupo modernas são uma coisa completamente diferente. Os meus grupos tem entre 12 e 20 pessoas. Há curadoria de perfil — sei quem vai em cada grupo porque falo com toda a gente antes. As experiências são autênticas: dormimos no deserto do Sahara, fazemos tracking com gorilas na floresta, visitamos aldeias que não estao em nenhum guia turístico.</p>
+
+    <p>As vantagens reais de viajar em grupo:</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Vantagem</th>
+          <th>O que isto significa na prática</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Preço</td><td>Negociação de grupo traduz-se em 20-40% menos face ao preço individual</td></tr>
+        <tr><td>Segurança</td><td>Nunca estas sozinho num destino desconhecido — há sempre alguém</td></tr>
+        <tr><td>Logística zero</td><td>Eu trato de tudo: voos, hotéis, transfers, guias, restaurantes, actividades</td></tr>
+        <tr><td>Companhia</td><td>Conheces pessoas com interesses parecidos aos teus, muitas vezes nascem amizades</td></tr>
+        <tr><td>Acesso exclusivo</td><td>Experiências que só grupos conseguem: visitas privadas, guias especializados, sítios fora da rota</td></tr>
+      </tbody>
+    </table>
+
+    <p>Há ainda uma vantagem que raramente se menciona: o conforto emocional. Quando estás num país completamente diferente do teu — com língua, comida, costumes e paisagens que não conheces — ter pessoas ao teu lado que estão a viver a mesma experiência é tranquilizador. Partilhar o espanto, o riso, o cansaco. Isso torna a experiência mais rica.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>14 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">"E Se Eu Não Gostar das Pessoas do Grupo?"</h3>
+
+    <p>E uma preocupacao legitima. E vou ser honesta: pode acontecer. Num grupo de 15-20 pessoas, é estatisticamente provavel que haja alguém com quem tenhas menos afinidade. E normal — acontece no trabalho, acontece na familia, acontece em viagens.</p>
+
+    <p>O que faz a diferença é como o grupo é gerido. Eu faço questão de falar com cada pessoa antes da viagem. Crio um grupo de WhatsApp semanas antes da partida para que toda a gente se va conhecendo. E durante a viagem, há sempre momentos de grupo e momentos de liberdade individual — ninguém e obrigado a estar colado ao grupo 24 horas por dia.</p>
+
+    <p>Nos meus grupos, toda a gente se conhece antes de embarcar. Quando chegas ao aeroporto, não estás a encontrar desconhecidos — estás a encontrar pessoas com quem já falaste, já partilhaste expectativas, já combinaste o que querem fazer.</p>
+
+    <p>E o que vejo consistentemente é o oposto do que as pessoas temem: a maioria dos viajantes volta com contactos novos, com amizades inesperadas, com pessoas que quer rever. Há grupos que marcam jantares meses depois de regressar. Há pessoas que repetem viagem comigo exactamente porque querem reencontrar o grupo anterior.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>15 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">O Hibrido: Grupo Com Liberdade</h3>
+
+    <p>O modelo que eu prático não é "grupo rigido onde toda a gente faz tudo junta". E um hibrido. Há dias com programa definido — os momentos que exigem coordenação, como safaris, travessias, visitas com guia. E há dias ou meias-dias livres — para explorar a teu ritmo, descansar, perder-te numa medina, sentar-te num cafe é simplesmente observar.</p>
+
+    <p>Dentro dos dias programados, há actividades que são opcionais. Queres fazer rafting? Óptimo. Preferes ficar junto a piscina do lodge? Também óptimo. Ninguém te obriga a nada — o programa é uma sugestao estruturada, não um exercício militar.</p>
+
+    <p>Isto é o melhor dos dois mundos: tens a segurança, o preço é a logística de um grupo, com a liberdade é o ritmo de quem viaja sozinho.</p>
+
+    <div class="tip-box no-break">
+      <span class="tip-label">DICA DA MARIA</span>
+      <p>Se nunca viajaste em grupo, experimenta primeiro num destino mais acessível — Marrocos (870 EUR, voos incluídos) é perfeito para uma primeira experiência. Se gostares, depois podes aventurar-te em destinos mais exóticos. Se não gostares, pelo menos gastaste menos de 900 EUR a descobri-lo.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>16 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 4                                     -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">04</span>
+    <span class="chapter-label">CAPÍTULO 4:</span>
+    <h2 class="chapter-title">COMO ESCOLHER UMA AGÊNCIA<br>(OU CONSULTORA) DE CONFIANÇA</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Este capítulo pode poupar-te centenas — ou milhares — de euros e muitas dores de cabeca. Porque escolher mal quem te organiza a viagem é uma das formas mais rápidas de transformar ferias de sonho num pesadelo.</p>
+
+    <p>Vou dar-te as ferramentas para que nunca te aconteca.</p>
+
+    <h3 class="chapter-subtitle">As 7 Perguntas Que Deves Fazer ANTES de Pagar</h3>
+
+    <p>Antes de transferires um centimo para qualquer agência, consultora ou operador, faz estas sete perguntas. Se não te souberem responder de forma clara e directa, desconfia.</p>
+
+    <p><strong>1. "Tem licença RNAVT?"</strong><br>O RNAVT é o Registo Nacional de Agentes de Viagens e Turismo. Se quem te vende a viagem não tem este registo, está a operar ilegalmente. E se algo correr mal, não tens protecção nenhuma. Verifica em turismodeportugal.pt. Se não tem RNAVT, foge.</p>
+
+    <p><strong>2. "O preço inclui voos?"</strong><br>Parece uma pergunta óbvia, mas não e. Muitos pacotes são anunciados "desde X EUR" sem incluir voos. E os voos podem ser a parte mais cara da viagem. Pergunta sempre.</p>
+
+    <p><strong>3. "O que acontece se eu tiver de cancelar?"</strong><br>Doença, emergência familiar, mudanca de planos. Acontece. Antes de reservar, sabe exactamente quais são as condições de cancelamento: até quando podes cancelar, quanto recuperas, que opções tens.</p>
+
+    <p><strong>4. "Quem é o operador local no destino?"</strong><br>Uma boa agência ou consultora sabe exactamente com quem trabalha no terreno. Se não te sabe dizer quem é o operador local — o nome, a empresa, a experiência — é um sinal de que não tem controlo sobre o que te está a vender.</p>
+
+    <p><strong>5. "Quantas pessoas já levou a este destino?"</strong><br>Experiência real conta. Alguem que já levou 50 pessoas a Uganda sabe coisas que alguém que está a vender o pacote pela primeira vez não sabe. Pergunta — e pede exemplos concretos.</p>
+
+    <p><strong>6. "Posso falar com alguém que já viajou consigo?"</strong><br>Testemunhos reais de clientes reais. Se a resposta for "não" ou "não temos isso", levanta a sobrancelha. Quem faz bom trabalho tem sempre clientes dispostos a falar sobre a experiência.</p>
+
+    <p><strong>7. "Há custos adicionais que não estao no orçamento?"</strong><br>A pergunta definitiva. Se depois de responder a tudo o resto, ainda te apresentam custos que não estavam no orçamento inicial — taxas, suplementos, extras "opcionais" que afinal são essenciais — sabes que não estás a lidar com alguém transparente.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>17 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Red Flags — Sinais de Que Algo Não Esta Bem</h3>
+
+    <p>Ao longo dos ultimos anos, tanto como viajante como consultora, aprendi a identificar os sinais de alerta. Se encontrares algum destes, pensas duas vezes:</p>
+
+    <p><strong>Não tem RNAVT visível.</strong> Já falei disto, mas vale a pena repetir. É o mínimo dos mínimos.</p>
+
+    <p><strong>Pressão para reservar "hoje".</strong> "Este preço só e válido até ao fim do dia." "Tenho mais duas pessoas interessadas neste lugar." "Se não reservares agora, perdes." Pressão para decidir sem tempo para pensar é a táctica mais antiga do comércio — é a mais eficaz em fazer pessoas tomarem más decisões.</p>
+
+    <p><strong>Não responde a perguntas directas sobre preços.</strong> Se perguntas "o que está incluído?" é a resposta é vaga, generica ou te remete para "termos e condições", algo não está bem. O preço de uma viagem não é um segredo de estado.</p>
+
+    <p><strong>Não tem testemunhos ou recusa mostrar.</strong> Hoje em dia, qualquer profissional sério tem avaliações de clientes. No Google, no Instagram, no Facebook, algures. Se não há vestigio nenhum de que alguém viajou com esta entidade e ficou satisfeito, desconfia.</p>
+
+    <p><strong>Preço demasiado bom para ser verdade sem explicação.</strong> Um pacote para as Maldivas a 399 EUR? Sim, existe — mas provavelmente não inclui voos, é um hotel de uma estrela, e tens de pagar por tudo o resto. Se o preço é espetaculamente baixo e ninguém te explica porquês, e porque há coisas que não te estão a dizer.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>18 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Agência Tradicional vs Consultora Independente</h3>
+
+    <p>Não há um modelo melhor do que o outro em absoluto. Há modelos melhores para determinadas situações. Mas é importante que saibas as diferenças.</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Aspecto</th>
+          <th>Agência Tradicional</th>
+          <th>Consultora Independente (como eu)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Atendimento</td><td>Balcao, número de vez, horario de loja</td><td>Pessoal, WhatsApp directo, pelo nome próprio</td></tr>
+        <tr><td>Destinos</td><td>Catalogo padrão (os mesmos de sempre)</td><td>Curadoria própria, destinos fora da rota</td></tr>
+        <tr><td>Preço</td><td>Margens altas, custos de estrutura incluídos</td><td>Margens mais justas, sem custos fixos de loja</td></tr>
+        <tr><td>Flexibilidade</td><td>Pacotes rigidos, difícil adaptar</td><td>Tudo e conversável e adaptável</td></tr>
+        <tr><td>Pos-venda</td><td>Call center, tempo de espera</td><td>"Liga-me" — e eu atendo</td></tr>
+        <tr><td>Garantia</td><td>RNAVT + fundo de garantia</td><td>RNAVT + fundo de garantia (a mesma protecção legal)</td></tr>
+      </tbody>
+    </table>
+
+    <p>O ponto importante é o ultimo da tabela: a protecção legal é exactamente a mesma. Uma consultora independente registada no RNAVT oferece-te exactamente as mesmas garantias que uma agência de cadeia. O teu dinheiro esta igualmente protegido.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>19 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Porque e Que Eu Faço O Que Faço</h3>
+
+    <p>Antes das viagens, trabalhei em hotelaria. Depois no imobiliario. São áreas onde aprendi a tratar pessoas, a negociar, a organizar logísticas complexas. Mas nenhuma me dava aquilo que procurava: acordar todos os dias entusiasmada com o trabalho.</p>
+
+    <p>As viagens deram-me isso. Não faço isto para ficar rica — se quisesse margens altas, vendia pacotes Cancun como toda a gente. Faço porque adoro encontrar destinos que as pessoas não conhecem, construir experiências que lhes ficam na memória, e ver a cara de espanto de alguém quando encontra gorilas na floresta ou vê uma árvore dragao-de-sangue em Socotra.</p>
+
+    <p>Sou consultora de viagens associada a VooViver, com RNAVT N.12366. Cada viagem que organizo tem a mesma protecção legal que uma viagem de qualquer grande agência. Mas com um toque pessoal que nenhuma grande agência consegue dar — porque numa grande agência, tu es um número. Comigo, es uma pessoa com nome, com preferencias, com expectativas que eu faço questão de conhecer e respeitar.</p>
+
+    <div class="tip-box no-break">
+      <span class="tip-label">DICA DA MARIA</span>
+      <p>Se uma agência não consegue dizer-te exactamente o que está incluído no preço em menos de 2 minutos, não merece o teu dinheiro.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>20 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- PART II DIVIDER                               -->
+  <!-- ============================================= -->
+  <div class="part-divider">
+    <span class="part-label">PARTE II</span>
+    <h2 class="part-title">PREPARAR A VIAGEM</h2>
+    <div class="gold-line gold-line-center gold-line-wide mt-3"></div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 5                                     -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">05</span>
+    <span class="chapter-label">CAPÍTULO 5:</span>
+    <h2 class="chapter-title">DOCUMENTOS: O CHECKLIST<br>DEFINITIVO</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Este capítulo é o mais prático do guia inteiro. Não há histórias, não há reflexões — há uma lista exaustiva de tudo o que precisas de ter tratado antes de viajar. Imprime esta secção ou guarda-a no telemóvel. Vai ser a tua âncora.</p>
+
+    <h3 class="chapter-subtitle">Passaporte</h3>
+
+    <p>O teu passaporte é o documento mais importante de qualquer viagem internacional. É aqui esta o que muitas pessoas não sabem: não basta que esteja válido no dia em que viajas.</p>
+
+    <p><strong>Regra fundamental:</strong> A maioria dos países exige que o teu passaporte tenha pelo menos 6 meses de validade APOS a data de regresso. Isto significa que se a tua viagem termina em Outubro é o teu passaporte expira em Marco do ano seguinte, estás dentro do limite — mas se expira em Janeiro, não te deixam embarcar.</p>
+
+    <p><strong>Páginas em branco:</strong> Precisas de pelo menos 2 páginas totalmente em branco. Carimbos e vistos precisam de espaço. Já vi pessoas serem impedidas de embarcar porque o passaporte estava cheio de carimbos e não tinha páginas livres.</p>
+
+    <p><strong>Renovacao:</strong> Demora 3 a 6 semanas em Portugal, dependendo do consulado e da época do ano. No verao pode demorar mais. Não deixes para a última semana — marca o teu pedido com pelo menos 2 meses de antecedência.</p>
+
+    <p><strong>Custo:</strong> Cerca de 65 EUR em Portugal.</p>
+
+    <p><strong>Dica que pode salvar a tua viagem:</strong> Faz uma copia digital do teu passaporte. Tira uma foto com o telemóvel e envia-a para o teu email. Se perderes o passaporte no estrangeiro, esta copia digital vai acelerar enormemente o processo na embaixada ou consulado. Faz também uma copia em papel e guarda-a separada do original.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>21 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Vistos — O Que Precisas de Saber</h3>
+
+    <p>A questão dos vistos depende do destino. Como cidadão português, tens acesso sem visto a muitos países — mas não a todos. Aqui fica o essencial para os destinos mais relevantes:</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Visto necessário?</th>
+          <th>Custo</th>
+          <th>Onde obter</th>
+          <th>Tempo de processamento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Marrocos</td><td>Não (até 90 dias)</td><td class="price">0 EUR</td><td>—</td><td>—</td></tr>
+        <tr><td>Tailândia</td><td>Não (até 30 dias)</td><td class="price">0 EUR</td><td>—</td><td>—</td></tr>
+        <tr><td>Uganda</td><td>Sim (e-Visa)</td><td class="price">~50 USD</td><td>visas.immigration.go.ug</td><td>3-5 dias úteis</td></tr>
+        <tr><td>Ruanda</td><td>Sim (e-Visa)</td><td class="price">~30 USD</td><td>irembo.gov.rw</td><td>3-5 dias úteis</td></tr>
+        <tr><td>Socotra/Iemen</td><td>Sim (especial)</td><td>Incluido no pacote</td><td>Nos tratamos de tudo</td><td>Variavel</td></tr>
+        <tr><td>Jordânia</td><td>Sim (na chegada)</td><td class="price">~40 JOD</td><td>Aeroporto</td><td>Imediato</td></tr>
+        <tr><td>Vietname</td><td>Sim (e-Visa)</td><td class="price">~25 USD</td><td>evisa.xuatnhapcanh.gov.vn</td><td>3-5 dias úteis</td></tr>
+        <tr><td>Geórgia</td><td>Não (até 1 ano)</td><td class="price">0 EUR</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <p>Quando viajas comigo, eu trato de toda a informação sobre vistos — digo-te exactamente o que precisas, quando tratar é como o fazer. Mas é bom saberes por ti, especialmente se um dia viajares por conta própria.</p>
+
+    <p><strong>Cuidado com sites de vistos falsos.</strong> Há dezenas de sites que parecem oficiais mas são intermediários que cobram 3 a 5 vezes mais do que o preço real do visto. Utiliza SEMPRE os sites oficiais do governo do país de destino. Na dúvida, pergunta-me.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>22 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Seguros</h3>
+
+    <p>O seguro de viagem não é opcional — é essencial. Mas como este tema merece atenção a sério, dediquei-lhe o capítulo 7 inteiro. Aqui fica apenas a nota: nunca viajes sem seguro. Nunca. Nem para uma semana em Espanha.</p>
+
+    <h3 class="chapter-subtitle">Vacinas e Saúde</h3>
+
+    <p>Dependendo do destino, podes precisar de vacinas obrigatorias ou recomendadas. Novamente, o capítulo 7 trata disto em detalhe. Aqui, a nota essencial: marca a tua consulta de medicina do viajante 6 a 8 semanas antes da viagem. Algumas vacinas precisam de tempo para fazerem efeito.</p>
+
+    <h3 class="chapter-subtitle">Outros Documentos</h3>
+
+    <p><strong>Carta de condução internacional.</strong> Se planeias alugar carro no estrangeiro, podes precisar da carta de condução internacional. Pede no IMT, custa cerca de 30 EUR e demora alguns dias.</p>
+
+    <p><strong>Cartão Europeu de Seguro de Doença (CESD).</strong> Se viajas dentro da Europa, este cartão da-te acesso a cuidados de saúde nas mesmas condições que os cidadãos locais. E gratuito, pedes online em seg-social.pt e recebe-lo em casa em poucos dias. Não substitui o seguro de viagem, mas complementa-o.</p>
+
+    <p><strong>Copias de tudo.</strong> Regra de ouro: para cada documento importante, tem três versoes — o original, uma copia em papel guardada noutro sítio (não na mesma mala), é uma copia digital no email ou na nuvem. Se algo se perder, tens sempre alternativa.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>23 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Checklist: Antes de Sair de Casa</h3>
+
+    <div class="glass-card no-break">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">ANTES DE SAIR DE CASA &mdash; VERIFICAR:</h4>
+      <ul class="checklist">
+        <li>Passaporte válido (mais de 6 meses após regresso)</li>
+        <li>Páginas em branco no passaporte (mínimo 2)</li>
+        <li>Visto obtido (se aplicavel ao destino)</li>
+        <li>Seguro de viagem activo e impresso</li>
+        <li>Vacinas em dia (caderneta actualizada)</li>
+        <li>Copias digitais de tudo enviadas para o email</li>
+        <li>Copias físicas guardadas na mala de mao</li>
+        <li>CESD (se viagem na Europa)</li>
+        <li>Carta de condução internacional (se necessário)</li>
+      </ul>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>24 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 6                                     -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">06</span>
+    <span class="chapter-label">CAPÍTULO 6:</span>
+    <h2 class="chapter-title">MALAS: A ARTE DE LEVAR<br>SÓ O ESSENCIAL</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Já organizei viagens para dezenas de pessoas. Sabes qual é a queixa mais comum no regresso? "Levei coisas a mais." Nunca ninguém me disse "levei coisas a menos". Nunca.</p>
+
+    <p>Há uma estatística que me impressionou quando a li pela primeira vez: 47% dos viajantes utilizam menos de metade do que levam na mala. Ou seja, quase metade da tua mala faz a viagem de ida e volta sem nunca sair do saco. E tu carregaste aquele peso no aeroporto, nas escadas, nos transfers.</p>
+
+    <p>Vou ajudar-te a ser mais inteligente do que isso.</p>
+
+    <h3 class="chapter-subtitle">A Regra de Ouro: Se Duvidas, Não Leves</h3>
+
+    <p>E simples. Se estás a olhar para uma peca de roupa é a pensar "se calhar posso precisar...", não vais precisar. Se duvidas, não leves. Aplica esta regra a cada peca individualmente é a tua mala vai encolher 30-40%.</p>
+
+    <p>A excepção: medicação. Na dúvida sobre medicação, leva. Sempre. (Ver capítulo 7.)</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>25 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Bagagem Por Tipo de Destino</h3>
+
+    <p>Cada destino tem as suas particularidades. O que funciona para Marrocos não funciona para um safari em Uganda. Aqui fica a minha recomendação:</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Tipo de mala</th>
+          <th>Peso recomendado</th>
+          <th>Notas específicas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Marrocos</td><td>Trolley medio + mochila de dia</td><td>15-18 kg</td><td>Roupa leve, lenço para mesquitas, sapatos confortáveis para medinas</td></tr>
+        <tr><td>Uganda/Ruanda</td><td>Saco flexível + mochila</td><td>15 kg</td><td>Safari: cores neutras (caqui, verde, bege). NADA azul escuro (atrai moscas tsetse)</td></tr>
+        <tr><td>Tailândia</td><td>Trolley medio + mochila</td><td>15-18 kg</td><td>Roupa muito leve, protecção solar, sapatos fáceis de tirar (templos)</td></tr>
+        <tr><td>Socotra</td><td>Mochila grande (55-65L)</td><td>12-15 kg</td><td>Destino remoto, mala rigida não funciona. Vais acampar.</td></tr>
+      </tbody>
+    </table>
+
+    <p>Nota sobre Uganda e Ruanda: a cor da roupa importa. Não é supersticio — e prática. As moscas tsetse são atraidas por cores escuras, especialmente azul-marinho e preto. Roupa de cores claras e neutras não é só uma sugestao estética — é uma questão de conforto.</p>
+
+    <h3 class="chapter-subtitle">O Que SEMPRE Levar (Independentemente do Destino)</h3>
+
+    <p>Há coisas que devem entrar na tua mala em qualquer viagem, para qualquer destino:</p>
+
+    <p><strong>Adaptador universal de tomadas.</strong> Custa 10-15 EUR e resolve o problema em qualquer país do mundo. Compra um com USB integrado — carregas o telemóvel é o power bank ao mesmo tempo.</p>
+
+    <p><strong>Power bank (10.000 mAh mínimo).</strong> Quando estás num safari é o teu telemóvel morre ao meio da manhã, não há tomadas na savana. O power bank é tão essencial como o passaporte.</p>
+
+    <p><strong>Saco estanque para documentos e electrónica.</strong> Um saco impermeavel pequeno para proteger passaporte, dinheiro, telemóvel é outros objectos sensíveis a água. Custa 5 EUR e pode salvar-te centenas.</p>
+
+    <p><strong>Kit de primeiros socorros básico.</strong> Pensos rápidos, paracetamol, anti-diarreico, desinfectante. Coisas que encontras em qualquer farmácia por poucos euros é que podem poupar-te uma visita desnecessária a um hospital desconhecido.</p>
+
+    <p><strong>Garrafa de água reutilizavel.</strong> Boa para o ambiente é para a carteira. Nalguns destinos, podes reenche-la em filtros do hotel.</p>
+
+    <p><strong>Candado pequeno.</strong> Para a mochila, para o cacifo do hostel, para o saco que deixas no transfer. Segurança básica.</p>
+
+    <p><strong>Caneta.</strong> Parece ridículo, mas vais precisar dela para preencher formulários de imigração no avião. E nunca há canetas suficientes para todos.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>26 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">O Que NUNCA Levar</h3>
+
+    <p><strong>Joias de valor.</strong> Não leves nada que não estejas preparado para perder. Viagens são imprevisiveis — coisas perdem-se, roubam-se, estragam-se. Deixa as pecas de valor em casa.</p>
+
+    <p><strong>Mais de 2 pares de sapatos.</strong> Um par confortável para andar o dia todo é um par de chinelos ou sandalias. Ninguém precisa de mais do que isso. Os sapatos são a coisa mais pesada e volumosa da mala.</p>
+
+    <p><strong>Livros fisicos.</strong> Um livro pesa 300-500 gramas. Um Kindle pesa 180 gramas e leva centenas de livros. Se não tens Kindle, usa a app no telemóvel ou tablet.</p>
+
+    <p><strong>"Roupa para o caso de."</strong> Não vai haver "caso de". Aquele vestido elegante para "se calhar vamos a um sítio fino" ou aquele casaco pesado para "se calhar arrefece" — provavelmente não vais usar. Verifica a meteorologia antes de fazer a mala e leva o que precisas, não o que "talvez" precises.</p>
+
+    <p><strong>Toalhas de praia.</strong> Os hotéis fornecem. Até em destinos basicos, há toalhas disponíveis. Poupa o espaço.</p>
+
+    <h3 class="chapter-subtitle">Tecnica de Arrumacao (Roll Packing)</h3>
+
+    <p>Há uma tecnica simples que poupa cerca de 30% do espaço na mala e reduz os vincos na roupa: em vez de dobrares as pecas, enrola-as. Cada t-shirt, cada par de calças, cada camisa — enrolada num cilindro apertado. Empilha os cilindros lado a lado na mala, como se fossem garrafas.</p>
+
+    <p>Se quiseres ir um passo além, investe em cubos organizadores (packing cubes). Custam cerca de 15 EUR um conjunto de 3-4 cubos. Cada cubo leva uma categoria: roupa interior num cubo, t-shirts noutro, calças noutro. Além de poupar espaço, sabes sempre onde esta cada coisa sem desarrumar a mala inteira.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>27 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Checklist de Mala</h3>
+
+    <div class="glass-card no-break">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">ROUPA (AJUSTAR AO DESTINO E DURAÇÃO):</h4>
+      <ul class="checklist">
+        <li>Roupa interior (1 por dia + 2 extra)</li>
+        <li>Meias (1 por dia + 2 extra)</li>
+        <li>T-shirts/blusas (3-5)</li>
+        <li>Calcas/calções (2-3)</li>
+        <li>Casaco leve (1)</li>
+        <li>Roupa de dormir (1)</li>
+        <li>Fato de banho (1-2)</li>
+        <li>Sapatos confortáveis (1 par)</li>
+        <li>Chinelos/sandalias (1 par)</li>
+      </ul>
+    </div>
+
+    <div class="glass-card no-break" style="margin-top: 1rem;">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">HIGIENE:</h4>
+      <ul class="checklist">
+        <li>Produtos em frascos de 100ml ou menos (regra avião)</li>
+        <li>Protector solar (SPF 50+)</li>
+        <li>Repelente de insectos</li>
+        <li>Medicação pessoal</li>
+        <li>Kit primeiros socorros básico</li>
+      </ul>
+    </div>
+
+    <div class="glass-card no-break" style="margin-top: 1rem;">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">TECNOLOGIA:</h4>
+      <ul class="checklist">
+        <li>Telemovel + carregador</li>
+        <li>Power bank (10.000 mAh+)</li>
+        <li>Adaptador universal</li>
+        <li>Auriculares</li>
+        <li>Camara (se não usas só o telemóvel)</li>
+      </ul>
+    </div>
+
+    <div class="glass-card no-break" style="margin-top: 1rem;">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">DOCUMENTOS:</h4>
+      <ul class="checklist">
+        <li>Passaporte</li>
+        <li>Copias de tudo (digital + papel)</li>
+        <li>Cartoes bancarios (de 2 bancos diferentes)</li>
+        <li>Seguro de viagem (impresso)</li>
+        <li>Bilhetes e reservas (impresso + digital)</li>
+      </ul>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>28 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 7                                     -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">07</span>
+    <span class="chapter-label">CAPÍTULO 7:</span>
+    <h2 class="chapter-title">SAÚDE E SEGUROS:<br>O QUE NINGUEM TE DIZ</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Este é provavelmente o capítulo mais importante de todo o guia. Não porque seja o mais divertido — não e. Mas porque uma emergência médica no estrangeiro sem preparação pode arruinar-te financeiramente. E não estou a exagerar.</p>
+
+    <h3 class="chapter-subtitle">Seguro de Viagem — NÃO e Opcional</h3>
+
+    <p>Se achas que o seguro de viagem é caro, espera até veres a conta de um hospital na Tailândia.</p>
+
+    <p>Esta frase pode parecer dramática, mas os números são reais. Aqui fica o que custa uma emergência médica nos destinos mais comuns — sem seguro:</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Consulta médica</th>
+          <th>Internamento (1 dia)</th>
+          <th>Evacuação médica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Marrocos</td><td class="price">50-100 EUR</td><td class="price">200-500 EUR</td><td class="price">5.000-15.000 EUR</td></tr>
+        <tr><td>Tailândia</td><td class="price">100-300 EUR</td><td class="price">500-2.000 EUR</td><td class="price">15.000-50.000 EUR</td></tr>
+        <tr><td>Uganda</td><td class="price">100-300 EUR</td><td class="price">300-1.000 EUR</td><td class="price">20.000-80.000 EUR</td></tr>
+      </tbody>
+    </table>
+
+    <p>Evacuação médica significa ser transportado de avião para um hospital que tenha os meios necessários. Se estás numa ilha na Tailândia e precisas de cirurgia, tens de ir de avião para Banguecoque. Se estas em Uganda é a situação é grave, podes ter de ser evacuado para a África do Sul ou até para a Europa. O custo? Dezenas de milhares de euros.</p>
+
+    <p>Com um seguro de viagem que custa 30 a 60 EUR — repara, 30 a 60 EUR para uma viagem de 1-2 semanas — tudo isto está coberto. Sem seguro, podes voltar de ferias com uma divida de milhares de euros. Ou pior: não receberes o tratamento que precisas porque não consegues pagar.</p>
+
+    <p>Não há desculpa para viajar sem seguro. Nenhuma.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>29 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Como Escolher o Seguro Certo</h3>
+
+    <p>Nem todos os seguros de viagem são iguais. Há seguros de 15 EUR que não cobrem quase nada é seguros de 50 EUR que cobrem tudo. A diferença esta nos detalhes.</p>
+
+    <p><strong>Cobertura mínima recomendada:</strong> 100.000 EUR em despesas médicas. Parece muito, mas uma evacuação médica pode facilmente ultrapassar os 50.000 EUR. Se o teu seguro só cobre 30.000, pagas o resto do bolso.</p>
+
+    <p><strong>O que verificar antes de contratar:</strong></p>
+
+    <ol>
+      <li><strong>Despesas médicas e hospitalares</strong> — cobertura mínima de 100.000 EUR</li>
+      <li><strong>Evacuação e repatriamento</strong> — sem limite ou com limite alto (500.000+)</li>
+      <li><strong>Cancelamento de viagem</strong> — se precisares de cancelar por doença ou emergência</li>
+      <li><strong>Bagagem perdida ou danificada</strong> — reembolso de itens pessoais</li>
+      <li><strong>Atrasos de voo</strong> — compensação por despesas extra (hotel, refeições)</li>
+      <li><strong>Responsabilidade civil</strong> — se causares danos a terceiros acidentalmente</li>
+    </ol>
+
+    <p><strong>Seguradoras de referência em Portugal</strong> (sem links de afiliado — recomendo porque confio, não porque recebo comissao):</p>
+
+    <ul>
+      <li><strong>IATI Seguros</strong> — popular entre viajantes frequentes, boa cobertura, apoio em português</li>
+      <li><strong>Heymondo</strong> — boa relação qualidade-preço, app prática</li>
+      <li><strong>Allianz Travel</strong> — marca de referência, cobertura abrangente</li>
+      <li><strong>Seguro do cartão de crédito</strong> — alguns cartões premium incluem seguro de viagem, mas verifica a cobertura (costuma ser limitada)</li>
+    </ul>
+
+    <p>Nas minhas viagens de grupo, o seguro está incluído ou ajudo-te a escolher o mais adequado para o destino. Mas se viajares por conta própria, contrata sempre antes de sair de casa.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>30 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Vacinas — O Que e Obrigatório e O Que e Recomendado</h3>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Vacina</th>
+          <th>Obrigatória para</th>
+          <th>Recomendada para</th>
+          <th>Onde fazer</th>
+          <th>Custo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Febre Amarela</td><td>Uganda, Ruanda</td><td>África subsariana</td><td>Centro de Vacinação Internacional</td><td>Gratuita (SNS)</td></tr>
+        <tr><td>Hepatite A</td><td>—</td><td>África, Ásia, America Latina</td><td>Centro de saúde</td><td>Gratuita (SNS)</td></tr>
+        <tr><td>Hepatite B</td><td>—</td><td>Todos os destinos</td><td>Centro de saúde</td><td>Gratuita (SNS)</td></tr>
+        <tr><td>Febre Tifoide</td><td>—</td><td>India, África, Sudeste Asiático</td><td>Centro de Vacinação Internacional</td><td class="price">~20-40 EUR</td></tr>
+        <tr><td>Malaria (profilaxia)</td><td>—</td><td>Uganda, partes da Tailândia, Socotra</td><td>Médico de familia</td><td class="price">~30-60 EUR</td></tr>
+        <tr><td>Tetano (reforco)</td><td>—</td><td>Todos os destinos (se >10 anos)</td><td>Centro de saúde</td><td>Gratuita (SNS)</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Como funciona na prática:</strong></p>
+
+    <p>Marca uma consulta de medicina do viajante num Centro de Vacinação Internacional. Em Lisboa, há no Hospital de Dona Estefania e no Instituto de Higiene e Medicina Tropical. No Porto, no Hospital de São João. Há centros em várias cidades do país.</p>
+
+    <p>Leva o teu boletim de vacinas e as informações da viagem (destino, duração, actividades previstas). O médico avalia o teu caso e recomenda o plano de vacinação adequado. Algumas vacinas precisam de ser dadas com 4-6 semanas de antecedência para fazerem efeito — por isso, marca a consulta cedo.</p>
+
+    <p><strong>Febre Amarela — nota especial:</strong> Se viajas para Uganda ou Ruanda, a vacina da febre amarela e OBRIGATÓRIA. Sem o certificado internacional de vacinação, não entras no país. Ponto final. A vacina e gratuita no SNS, e válida para toda a vida e não doi mais do que uma vacina normal.</p>
+
+    <p><strong>Malaria — nota especial:</strong> Não há vacina contra a malaria (existe uma recente, mas não está disponível para viajantes). O que existe e profilaxia — medicação que tomas antes, durante e após a viagem para reduzir drasticamente o risco. O teu médico receita a mais adequada. Além da medicação, a melhor protecção e evitar picadas de mosquitos: repelente, roupa comprida ao amanhecer e ao entardecer, e redes mosquiteiras.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>31 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Farmácia de Viagem</h3>
+
+    <p>Não precisas de levar metade da farmácia de casa. Mas há coisas que deves ter sempre contigo, porque quando precisas delas, precisas naquele momento — não no dia seguinte quando encontrares uma farmácia.</p>
+
+    <p><strong>A tua mini-farmácia de viagem:</strong></p>
+
+    <ul>
+      <li><strong>Paracetamol</strong> — febre e dor (o básico dos basicos)</li>
+      <li><strong>Ibuprofeno</strong> — inflamação, dores musculares (caminhar o dia todo cobra o preço)</li>
+      <li><strong>Anti-diarreico (loperamida)</strong> — não é glamoroso, mas vou ser directa: diarreia do viajante acontece. Acontece a todos. Ter anti-diarreico na mala não é pessimismo, é bom senso.</li>
+      <li><strong>Anti-histaminico</strong> — alergias, reacções a insectos, comida diferente</li>
+      <li><strong>Sais de reidratacao oral</strong> — essenciais se tiveres diarreia ou vomitos. A desidratação num clima quente pode ser perigosa.</li>
+      <li><strong>Pensos rápidos + desinfectante</strong> — bolhas nos pés, pequenos cortes, escoriações</li>
+      <li><strong>Protector solar SPF 50+</strong> — conto como saúde, não como vaidade. Queimaduras solares num safari ou numa praia tropical podem arruinar dias de viagem.</li>
+    </ul>
+
+    <p><strong>Se tomas medicação regular:</strong> leva SEMPRE quantidade extra — para pelo menos o dobro dos dias da viagem. Atrasos, voos cancelados, prolongamentos inesperados acontecem. E leva a receita médica traduzida em ingles. Alguns medicamentos comuns em Portugal não existem noutros países, e se precisares de comprar lá, a receita ajuda o farmacista local a encontrar o equivalente.</p>
+
+    <div class="important-box no-break">
+      <span class="important-label">IMPORTANTE</span>
+      <p>Se tomas medicação regular, leva SEMPRE quantidade extra + receita em ingles. Alguns medicamentos comuns em Portugal não existem noutros países. Guarda a medicação na mala de mao — NUNCA na mala de porao.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>32 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 8                                     -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">08</span>
+    <span class="chapter-label">CAPÍTULO 8:</span>
+    <h2 class="chapter-title">DINHEIRO LA FORA: CARTÕES,<br>CÂMBIO E ARMADILHAS</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Este capítulo pode literalmente poupar-te centenas de euros. Não estou a exagerar. A forma como geres o dinheiro no estrangeiro é uma das áreas onde os viajantes perdem mais dinheiro desnecessáriamente — e onde os mais espertos poupam uma fortuna.</p>
+
+    <h3 class="chapter-subtitle">A Armadilha do Câmbio no Aeroporto</h3>
+
+    <p>Chegar ao aeroporto de destino e ir directamente ao balcão de câmbio é um dos erros mais caros que podes cometer. Os balcões de câmbio nos aeroportos cobram entre 5% e 15% de margem sobre a taxa de câmbio real. Em alguns aeroportos, a margem ultrapassa os 15%.</p>
+
+    <p>Para te dar um exemplo concreto: se trocares 100 EUR no aeroporto de Marraquexe, recebes menos 10-15 EUR em Dirhams do que se trocasses na cidade. Em 100 EUR parece pouco. Mas se trocas 500 EUR? São 50-75 EUR perdidos. Literalmente deitados ao lixo por pura conveniencia.</p>
+
+    <p>A regra é simples: nunca troques dinheiro no aeroporto. Se precisas absolutamente de cash para o taxi até ao hotel, troca o mínimo possível — 20 ou 30 EUR — e trata do resto na cidade.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>33 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Melhores Formas de Ter Dinheiro no Estrangeiro</h3>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Método</th>
+          <th>Custo real</th>
+          <th>Quando usar</th>
+          <th>Notas importantes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Cartão sem taxas (Revolut, Wise, N26)</td><td style="color: var(--teal);">0-1%</td><td>Sempre que possível</td><td>Melhor opção geral — taxa de câmbio real</td></tr>
+        <tr><td>Multibanco local no destino</td><td>1-3%</td><td>Quando precisas de cash</td><td>Recusa SEMPRE a opção "conversão na moeda do cartão"</td></tr>
+        <tr><td>Casa de câmbio na cidade</td><td>1-3%</td><td>Destinos com economia baseada em dinheiro</td><td>Compara preços, nunca no aeroporto</td></tr>
+        <tr><td>Cartão de crédito tradicional</td><td style="color: var(--coral);">2-4%</td><td>Apenas como emergência</td><td>Taxas elevadas — evitar como método principal</td></tr>
+        <tr><td>Levar euros em cash</td><td>Variavel</td><td>Backup de segurança</td><td>Maximo 200-300 EUR — não mais</td></tr>
+      </tbody>
+    </table>
+
+    <p>A minha recomendação e clara: abre um cartão Revolut ou Wise. É a melhor coisa que um viajante pode fazer pelo seu bolso.</p>
+
+    <h3 class="chapter-subtitle">Revolut e Wise — O Que Todo o Viajante Devia Ter</h3>
+
+    <p>Não tenho nenhum acordo com estas empresas. Não recebo comissao nem beneficio. Recomendo porque uso e funciona.</p>
+
+    <p>O <strong>Revolut</strong> é o <strong>Wise</strong> (anteriormente TransferWise) são contas bancárias digitais que te permitem ter dinheiro em várias moedas e gastar no estrangeiro com a taxa de câmbio real — aquela que vês no Google quando pesquisas "EUR para THB" — sem margens escondidas (ou com margens mínimas).</p>
+
+    <p><strong>Como funciona na prática:</strong></p>
+
+    <ol>
+      <li>Descarregas a app no telemóvel (gratuita)</li>
+      <li>Abres conta em 5 minutos (precisas do Cartão de Cidadao)</li>
+      <li>Recebes um cartão físico (ou usas o virtual imediatamente)</li>
+      <li>Transferes dinheiro da tua conta bancaria portuguesa para a conta Revolut/Wise</li>
+      <li>Usas o cartão para pagar no estrangeiro — a conversão e feita automaticamente a taxa real</li>
+      <li>Também podes levantar dinheiro em multibancos locais (com limites gratuitos mensais)</li>
+    </ol>
+
+    <p>O Revolut no plano gratuito permite-te trocar até 1.000 EUR por mês sem qualquer taxa. Acima disso, cobra uma margem pequena (0,5-1%). O Wise cobra uma taxa transparente por transferencia, tipicamente 0,3-0,7%.</p>
+
+    <p><strong>Cuidados:</strong></p>
+
+    <ul>
+      <li>Carrega a conta ANTES de viajares (não dependas de internet no destino para fazer transferencias)</li>
+      <li>O Revolut cobra uma taxa extra nos fins de semana para algumas moedas — tenta converter durante a semana</li>
+      <li>Tem sempre um cartão alternativo (de outro banco) como backup — a tecnologia pode falhar</li>
+    </ul>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>34 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">A Regra do "Always Pay in Local Currency"</h3>
+
+    <p>Isto é absolutamente crítico e quase ninguém sabe.</p>
+
+    <p>Quando pagas com cartão no estrangeiro — seja num restaurante, numa loja ou num multibanco — o terminal ou a maquina vai, muitas vezes, perguntar-te: "Pagar em EUR ou em [moeda local]?"</p>
+
+    <p>A resposta correcta e SEMPRE: <strong>pagar em moeda local.</strong></p>
+
+    <p>Quando escolhes "pagar em EUR", activas algo chamado Dynamic Currency Conversion (DCC). Parece conveniente — vês o valor em euros, pensas que controlas melhor. Mas o que realmente acontece é que o banco ou comerciante local faz a conversão a uma taxa muito pior — normalmente 3-5% acima da taxa real. São eles que decidem a taxa, não o teu banco.</p>
+
+    <p>Quando escolhes "pagar em moeda local", é o TEU banco (ou o teu Revolut/Wise) que faz a conversão — é a taxa é sempre melhor.</p>
+
+    <p>Exemplo real: almoco na Tailândia que custa 500 THB.</p>
+
+    <ul>
+      <li>Pagas em moeda local (THB): o teu Revolut converte a taxa real &rarr; <span class="price">12,90 EUR</span></li>
+      <li>Pagas em EUR (DCC): o terminal converte a taxa deles &rarr; <span class="price">13,50-13,80 EUR</span></li>
+    </ul>
+
+    <p>Diferença? 60-90 cêntimos. Parece pouco. Mas multiplica por todas as transacções de uma viagem de 10-14 dias e perdes 50-100 EUR facilmente. Sem razão nenhuma.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>35 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Orçamento Diario Por Destino</h3>
+
+    <p>Para te ajudar a planear, aqui fica o que deves esperar gastar por dia em despesas pessoais nos destinos mais comuns — além do pacote de viagem:</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Orçamento diário (moderado)</th>
+          <th>O que inclui</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Marrocos</td><td class="price">30-50 EUR</td><td>Refeições fora do pacote, transporte local, entradas em monumentos, souvenirs</td></tr>
+        <tr><td>Tailândia</td><td class="price">40-60 EUR</td><td>Refeições, transporte (tuk-tuk, barco), actividades, massagens</td></tr>
+        <tr><td>Uganda/Ruanda</td><td class="price">30-50 EUR</td><td>Refeições extras, gorjetas, bebidas, souvenirs</td></tr>
+        <tr><td>Socotra</td><td class="price">20-30 EUR</td><td>Pouca despesa local (quase tudo incluído no pacote), artesanato</td></tr>
+      </tbody>
+    </table>
+
+    <p>Estes valores são para um estilo moderado — não é backpacker extremo nem luxo. É o equilibrio: comer bem, fazer actividades, comprar umas lembrancas, sem extravagancia.</p>
+
+    <div class="tip-box no-break">
+      <span class="tip-label">DICA DA MARIA</span>
+      <p>Abre uma conta Revolut ou Wise ANTES da viagem. Carrega o valor que planeias gastar + 20% de margem de segurança. Quando voltares, transferes o que sobrou para a tua conta. Zero stress com câmbio, zero surpresas na factura do cartão.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>36 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- PART III DIVIDER                              -->
+  <!-- ============================================= -->
+  <div class="part-divider">
+    <span class="part-label">PARTE III</span>
+    <h2 class="part-title">DURANTE A VIAGEM</h2>
+    <div class="gold-line gold-line-center gold-line-wide mt-3"></div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 9                                     -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">09</span>
+    <span class="chapter-label">CAPÍTULO 9:</span>
+    <h2 class="chapter-title">AEROPORTOS E VOOS: TRUQUES<br>DE QUEM VIAJA A SÉRIO</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Há pessoas para quem a viagem comeca quando chegam ao destino. Para mim, comeca no momento em que sais de casa. É o aeroporto é a primeira prova: ou estas preparado, ou passas as primeiras horas da viagem em stress desnecessário.</p>
+
+    <p>Aqui ficam os truques que aprendi — a viajar é a ver dezenas de viajantes passarem pelo mesmo.</p>
+
+    <h3 class="chapter-subtitle">Check-in Online — Faz SEMPRE</h3>
+
+    <p>Parece óbvio, mas vou dize-lo na mesma porque continuo a ver pessoas a chegar ao aeroporto sem check-in feito, a enfrentar filas desnecessárias é a ficar com os piores lugares.</p>
+
+    <p>Faz o check-in online 24 a 48 horas antes do voo (dependendo da companhia). Escolhe o teu lugar: corredor se valorizas conforto e acesso (levantar sem incomodar ninguém), janela se queres fotos e descansar encostado, e saída de emergência se queres espaço para as pernas (normalmente custa extra, mas vale a pena em voos longos).</p>
+
+    <p>Descarrega o cartão de embarque para o telemóvel E faz uma captura de ecra. Se o telemóvel ficar sem bateria ou a app não funcionar, tens a imagem guardada. E se quiseres segurança maxima, imprime. Um papel não fica sem bateria.</p>
+
+    <h3 class="chapter-subtitle">O Que Levar na Mala de Mao (e no Bolso)</h3>
+
+    <p>A regra que dou a todos os meus viajantes: se a tua mala de porao se perder, tens de sobreviver 24-48 horas com o que levas na mala de mao. Por isso, a mala de mao não é para livros e revistas — é para o essencial.</p>
+
+    <p><strong>Na mala de mao, SEMPRE:</strong></p>
+    <ul>
+      <li>Passaporte e documentos</li>
+      <li>Carteira com cartões bancarios</li>
+      <li>Telemovel + carregador + power bank</li>
+      <li>Medicação pessoal (NUNCA no porao)</li>
+      <li>Uma muda de roupa básica (t-shirt, roupa interior, meias)</li>
+      <li>Snack e garrafa de água (vazia até passar a segurança, enche depois)</li>
+      <li>Casaco ou sweatshirt (avioes tem ar condicionado agressivo)</li>
+      <li>Auriculares</li>
+    </ul>
+
+    <p><strong>No bolso ou bolsa corporal (acessível sem abrir a mala):</strong></p>
+    <ul>
+      <li>Passaporte</li>
+      <li>Cartão de embarque</li>
+      <li>Caneta (para formulários de imigração)</li>
+      <li>Dinheiro em cash (o mínimo necessário)</li>
+    </ul>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>37 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Liquidos, Electronica e Segurança</h3>
+
+    <p>A regra dos 100ml continua em vigor na maioria dos aeroportos: cada recipiente de líquido até 100ml, todos dentro de um saco transparente com fecho (máximo 1 litro por pessoa). Isto inclui cremes, pastas de dentes, desodorizantes em spray, perfumes. Compra frascos reutilizaveis de viagem — custam 2-3 EUR num conjunto e resolvem o problema para sempre.</p>
+
+    <p>Na segurança, tira o portátil é o tablet da mochila e coloca-os em bandejas separadas. Isto agiliza o processo e evita que te mandem voltar atrás. Nos aeroportos com scanners de última geração, já não é necessário — mas na maioria, ainda e.</p>
+
+    <p>Power banks: SEMPRE na mala de mao. E proibido transportar power banks na mala de porao por causa do risco de incêndio das baterias de litio. Se puseres no porao, vao remover a tua mala e perdes tempo.</p>
+
+    <h3 class="chapter-subtitle">Escalas e Conexoes</h3>
+
+    <p>Se a tua viagem tem escala, o tempo de conexao é crítico.</p>
+
+    <p><strong>Tempos mínimos recomendados:</strong></p>
+    <ul>
+      <li>Aeroportos europeus (medio porte): 2 horas</li>
+      <li>Hubs grandes (Dubai, Istanbul, Frankfurt): 3 horas</li>
+      <li>Conexao com mudanca de terminal: 3-4 horas</li>
+    </ul>
+
+    <p>Há companhias que vendem conexoes de 1h15 ou 1h30 como se fosse perfeitamente normal. E as vezes resulta — se tudo correr bem. Mas basta um atraso de 20 minutos na partida para transformares a tua conexao numa corrida desesperada por corredores interminaveis, chegares a porta de embarque ofegante e ouvires "the gate is now closed".</p>
+
+    <p>Não vale a pena poupar 50 EUR num voo com conexao apertada. O risco de perder a ligacao e ficar preso num aeroporto 8 horas a espera do próximo voo — sem falar na ansiedade — não compensa.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>38 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Atrasos e Cancelamentos — Os Teus Direitos</h3>
+
+    <p>Muita gente não sabe disto, mas se voas com uma companhia da UE ou a partir de um aeroporto da UE, tens direitos claros quando há atrasos ou cancelamentos. O Regulamento EU 261/2004 protege-te.</p>
+
+    <p><strong>O que te devem:</strong></p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Situação</th>
+          <th>Compensação</th>
+          <th>Direito adicional</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Atraso de 2-3 horas</td><td>—</td><td>Refeições e bebidas no aeroporto</td></tr>
+        <tr><td>Atraso de 3+ horas</td><td class="price">250-600 EUR</td><td>Refeições + hotel se necessário</td></tr>
+        <tr><td>Cancelamento sem aviso (&lt;14 dias)</td><td class="price">250-600 EUR</td><td>Voo alternativo OU reembolso total</td></tr>
+        <tr><td>Overbooking (recusa de embarque)</td><td class="price">250-600 EUR</td><td>Voo alternativo + refeições + hotel</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Os valores de compensação:</strong></p>
+    <ul>
+      <li>Voos até 1.500 km: <span class="price">250 EUR</span></li>
+      <li>Voos dentro da UE com mais de 1.500 km: <span class="price">400 EUR</span></li>
+      <li>Voos fora da UE entre 1.500 e 3.500 km: <span class="price">400 EUR</span></li>
+      <li>Voos fora da UE com mais de 3.500 km: <span class="price">600 EUR</span></li>
+    </ul>
+
+    <p><strong>Como reclamar:</strong></p>
+    <ol>
+      <li>Primeiro, directamente a companhia aerea (formulario no site)</li>
+      <li>Se não responderem em 6 semanas ou recusarem, podes usar servicos como AirHelp ou Flightright (ficam com uma percentagem, mas tratam de tudo)</li>
+      <li>Em ultimo caso, ANAC (Autoridade Nacional de Aviação Civil) em Portugal</li>
+    </ol>
+
+    <p>Muita gente não reclama porque não sabe que tem direito. Agora sabes. Não deixes passar.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>39 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 10                                    -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">10</span>
+    <span class="chapter-label">CAPÍTULO 10:</span>
+    <h2 class="chapter-title">NO DESTINO: SEGURANÇA,<br>CULTURA E RESPEITO</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Chegaste. Passaste o aeroporto, os transfers, o check-in. Estás finalmente no destino. Este capítulo e sobre como aproveitar ao máximo e evitar os problemas mais comuns.</p>
+
+    <h3 class="chapter-subtitle">Segurança — Senso Comum Amplificado</h3>
+
+    <p>A segurança no estrangeiro não exige medidas extremas. Exige o mesmo senso comum que tens em casa — ligeiramente amplificado porque estás num sítio que não conheces.</p>
+
+    <p><strong>Regras básicas que funcionam:</strong></p>
+
+    <p><strong>Documentos em duplicado, sempre separados.</strong> Original no bolso ou bolsa corporal. Copia em papel na mala. Copia digital no email. Se perderes um, tens os outros.</p>
+
+    <p><strong>Não mostres riqueza.</strong> Não andes com o telemóvel na mao o tempo todo. Não exibas cameras caras. Não uses joias visiveis. Na maioria dos destinos, isto não é necessário por perigo — é necessário por prudencia. Não atrais atenção desnecessária.</p>
+
+    <p><strong>Conhece o número de emergência local:</strong></p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Emergência geral</th>
+          <th>Policia</th>
+          <th>Ambulancia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Marrocos</td><td>19 (policia) / 15 (ambulancia)</td><td>19</td><td>15</td></tr>
+        <tr><td>Tailândia</td><td>191 (policia) / 1669 (ambulancia)</td><td>191</td><td>1669</td></tr>
+        <tr><td>Uganda</td><td>999 / 112</td><td>999</td><td>911</td></tr>
+        <tr><td>Ruanda</td><td>112</td><td>112</td><td>912</td></tr>
+      </tbody>
+    </table>
+
+    <p>Guarda estes números no telemóvel antes de viajar. É o número da embaixada ou consulado de Portugal no destino — pode não precisar, mas se precisares, vais querer te-lo a mao.</p>
+
+    <p><strong>Partilha o itinerário com alguém em casa.</strong> Uma pessoa de confiança deve saber onde estás a cada dia. Não precisa de ser ao minuto — basta um resumo: "Dia 1-3: Marraquexe. Dia 4-5: Deserto. Dia 6-8: Fes." Se acontecer algo, alguém sabe onde te procurar.</p>
+
+    <p>Em grupo, a segurança multiplica-se. É uma das maiores vantagens é uma das que menos se valoriza. Nunca estas sozinho num sítio desconhecido. Há sempre alguém que nota se não apareces ao pequeno-almoco, que te ajuda se te sentires mal, que fala por ti se não falas a língua.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>40 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Respeito Cultural — O Básico Que Faz Toda a Diferença</h3>
+
+    <p>Viajar é um privilegio. E com o privilegio vem a responsabilidade de respeitar o sítio onde estas e as pessoas que lá vivem. Não é complicado — é uma questão de informar-se antes e ter atenção no momento.</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Regra cultural importante</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Marrocos</td><td>Cobrir ombros e joelhos em mesquitas e zonas tradicionais. Pedir permissao antes de fotografar pessoas — especialmente mulheres. Não comer nem beber em publico durante o Ramadao.</td></tr>
+        <tr><td>Tailândia</td><td>Nunca tocar na cabeca de alguém (e a parte mais sagrada do corpo). Tirar sapatos antes de entrar em templos e em muitas casas. A monarquia é profundamente respeitada — nunca fazer comentarios negativos.</td></tr>
+        <tr><td>Uganda/Ruanda</td><td>Pedir sempre permissao para fotografar pessoas. Manter distância e silencio durante o tracking de gorilas. Gorjeta ao guia e trackers (nas minhas viagens, está incluída no pacote).</td></tr>
+        <tr><td>Socotra</td><td>Respeitar a natureza — não levar nada, não deixar nada. E um ecossistema único e frágil. Vestuario modesto (não é praia turística). Respeitar costumes locais.</td></tr>
+      </tbody>
+    </table>
+
+    <p>Uma nota pessoal: nos meus grupos, preparo um briefing cultural antes de cada viagem. Explico o que esperar, o que fazer é o que evitar. Ninguém chega ao destino sem saber como se comportar. E os guias locais que trabalham connosco completam essa preparação no terreno.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>41 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Comida Local — Sim, Experimenta</h3>
+
+    <p>A comida local é uma das melhores partes de qualquer viagem. É uma das que mais pessoas desperdicam, por medo.</p>
+
+    <p>Não te digo para comeres tudo sem cuidado. Digo-te para seres aventureiro COM cuidado. Há regras simples que reduzem drasticamente o risco de problemas:</p>
+
+    <p><strong>Água:</strong> Bebe sempre água engarrafada (com a tampa selada). Usa-a também para lavar os dentes. Nos destinos que organizo, garanto sempre acesso a água segura.</p>
+
+    <p><strong>Comida cozinhada:</strong> Se esta quente e acabou de ser cozinhado, é seguro. O calor mata bacterias. Problemas surgem com comida que esta há horas a temperatura ambiente.</p>
+
+    <p><strong>Fruta:</strong> Come fruta que descascas tu. Bananas, laranjas, mangas — perfeitas. Fruta já cortada numa banca de rua — evita.</p>
+
+    <p><strong>Restaurantes com movimento local:</strong> Se os locais comem ali, é bom sinal. Um restaurante cheio de marroquinos em Marraquexe é melhor aposta do que um restaurante vazio com menus em seis línguas. O volume de clientes significa rotatividade de comida — fresca, não requentada.</p>
+
+    <p>O tagine em Marrocos, o pad thai numa banca de rua em Banguecoque, o chapati com feijao em Uganda — são experiências que nenhum restaurante de hotel replica. Arrisca. Com prudencia, mas arrisca.</p>
+
+    <h3 class="chapter-subtitle">Gorjetas — Guia Por Destino</h3>
+
+    <p>A cultura de gorjeta varia enormemente de país para país. Nalguns sítios e quase obrigatória, noutros pode ser considerada insulto. Aqui fica o guia prático:</p>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Restaurante</th>
+          <th>Guia turístico</th>
+          <th>Hotel (porteiro/limpeza)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Marrocos</td><td>10% da conta</td><td class="price">50-100 MAD por dia</td><td class="price">10-20 MAD</td></tr>
+        <tr><td>Tailândia</td><td>Arredondar para cima</td><td class="price">100-300 THB por dia</td><td class="price">20-50 THB</td></tr>
+        <tr><td>Uganda/Ruanda</td><td>10% da conta</td><td class="price">10-15 USD por dia</td><td class="price">2-5 USD</td></tr>
+        <tr><td>Socotra</td><td>Arredondar</td><td class="price">5-10 USD por dia</td><td class="price">2-5 USD</td></tr>
+      </tbody>
+    </table>
+
+    <p>Nas minhas viagens de grupo, as gorjetas aos guias locais, motoristas e trackers já estao incluidas ou são organizadas colectivamente. Mas para despesas individuais — restaurantes onde jantas sozinho, porteiros, empregados de limpeza — é bom ter referência.</p>
+
+    <p>Uma nota sobre gorjeta nos safaris: os trackers e rangers que nos acompanham nos parques nacionais de Uganda e Ruanda ganham salários modestos. A gorjeta é uma parte significativa dos seus rendimentos. E também um reconhecimento directo do trabalho incrível que fazem — são eles que encontram os gorilas, que garantem a nossa segurança, que tornam a experiência possível.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>42 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- PART IV DIVIDER                               -->
+  <!-- ============================================= -->
+  <div class="part-divider">
+    <span class="part-label">PARTE IV</span>
+    <h2 class="part-title">DESTINOS QUE NÃO CONHECIAS</h2>
+    <div class="gold-line gold-line-center gold-line-wide mt-3"></div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 11                                    -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">11</span>
+    <span class="chapter-label">CAPÍTULO 11:</span>
+    <h2 class="chapter-title">10 DESTINOS INCRÍVEIS QUE CUSTAM<br>MENOS DO QUE PENSAS</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Este é o capítulo que me da mais prazer escrever. Porque e aqui que te mostro o que existe lá fora — longe das rotas turísticas saturadas, longe dos preços inflacionados, longe do "mais do mesmo" que as agências tradicionais te vendem.</p>
+
+    <p>Estes são destinos reais, com preços reais. Alguns já os ofereço nas minhas viagens de grupo. Outros estao em preparação. Todos te vao fazer pensar: "Eu não fazia ideia de que isto existia."</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>43 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 1: Socotra -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">1. Socotra, Iemen</h3>
+        <span class="badge badge-purple">EXCLUSIVO</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">1.880 EUR</span>
+        <span class="badge badge-teal">OUT-ABR</span>
+        <span class="badge badge-coral">AVENTUREIRO</span>
+        <span class="badge badge-gold">8-10 DIAS</span>
+      </div>
+      <p>Se eu pudesse levar-te a um único destino no mundo para te provar que há coisas que não imaginavas existirem, seria Socotra.</p>
+      <p>Socotra é um arquipelago no Oceano Indico, a sul do Iemen é a leste da Somalia. Esta tao isolado do continente que um terco das suas plantas não existe em mais nenhum lugar do planeta. As arvores dragao-de-sangue — aquelas que parecem cogumelos gigantes de tronco gordo e copa achatada — são o cartão de visita, mas há muito mais. Praias de areia branca completamente desertas, dunas que terminam no oceano, montanhas com grutas inexploradas, aldeias piscatorias onde o tempo parou.</p>
+      <p>Não há resorts. Não há hotéis de cinco estrelas. Dormes em tendas na praia, comes com os locais, viajas em veiculos todo-o-terreno por estradas que por vezes não são estradas. É uma aventura no sentido mais puro da palavra.</p>
+      <p><strong>EXCLUSIVO:</strong> Nenhuma agência em Portugal oferece Socotra. Trabalho directamente com o único operador local que organiza viagens para o arquipelago. Quando digo que este destino e único, não é marketing — é literalmente verdade.</p>
+      <p style="margin-bottom: 0;"><strong>Curiosidade:</strong> Socotra foi declarada Patrimonio Mundial pela UNESCO em 2008. Há cientistas que a chamam "as Galapagos do Oceano Indico". Mas ao contrario das Galapagos, quase ninguém a visita.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>43 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 2: Uganda e Ruanda -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">2. Uganda e Ruanda — Gorilas de Montanha</h3>
+        <span class="badge badge-teal">DISPONÍVEL</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">2.950 EUR</span>
+        <span class="badge badge-teal">FEV-MAR, JUN, SET-OUT</span>
+        <span class="badge badge-coral">MODERADO</span>
+        <span class="badge badge-gold">12-14 DIAS</span>
+      </div>
+      <p>Há experiências de viagem que mudam a forma como vês o mundo. Estar a dois metros de um gorila-de-montanha — um animal de 200 quilos, com mãos quase humanas, olhos que te olham de volta com uma inteligência que te desarma — é uma dessas experiências.</p>
+      <p>Existem cerca de 1.000 gorilas-de-montanha no mundo. Todos eles vivem nas florestas das montanhas Virunga, na fronteira entre Uganda, Ruanda e República Democrática do Congo. Não existem em mais nenhum sítio. Não existem em zoos. Ou os vês aqui, ou não os vês.</p>
+      <p>A viagem inclui o tracking dos gorilas (uma caminhada pela floresta tropical até encontrar um grupo familiar), safaris na savana do Queen Elizabeth National Park, encontros com chimpanzes em Kibale Forest, e o Lago Bunyonyi — um dos lagos mais bonitos de África.</p>
+      <p><strong>Preço de referência:</strong> A agência Pinto Lopes cobra 9.995 EUR por uma viagem semelhante. Eu cobro 2.950 EUR. Voos incluídos em ambos os casos. A diferença de 7.045 EUR não corresponde a uma diferença de qualidade — corresponde a diferença entre uma cadeia de intermediários é uma relação directa com operadores locais.</p>
+      <p style="margin-bottom: 0;"><strong>Curiosidade:</strong> A licença de tracking de gorilas custa 700 USD em Uganda e 1.500 USD no Ruanda. No meu pacote, está incluída.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>44 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 3: Marrocos -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">3. Marrocos Completo</h3>
+        <span class="badge badge-teal">DISPONÍVEL</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">870 EUR</span>
+        <span class="badge badge-teal">OUT-NOV, MAR-ABR</span>
+        <span class="badge badge-coral">ACESSÍVEL</span>
+        <span class="badge badge-gold">7-8 DIAS</span>
+      </div>
+      <p>Marrocos é o destino perfeito para quem quer sair da zona de conforto sem ir para o fim do mundo. A menos de 3 horas de voo de Lisboa, encontras um país que parece outro planeta: medinas com mil anos, desertos que se estendem até onde a vista alcanca, montanhas com neve, aldeias berberes suspensas em vales.</p>
+      <p>O meu roteiro inclui os três polos de Marrocos: Marraquexe (a cidade vermelha, caos organizado, a praca Jemaa el-Fna ao anoitecer), o deserto do Sahara (noite em tendas no meio das dunas, céu estrelado como nunca viste) e Fes (a medina mais antiga do mundo, artesaos a trabalhar couro e cerâmica como há seculos).</p>
+      <p><strong>Preço de referência:</strong> 2.595 EUR em agências tradicionais. O meu preço, com voos incluídos desde Portugal, e 870 EUR. Não é magia — é o resultado de trabalhar directamente com guias e operadores marroquinos, sem intermediários europeus.</p>
+      <p style="margin-bottom: 0;">E o destino que recomendo para uma primeira experiência de viagem de grupo. O choque cultural e forte o suficiente para ser emocionante, mas não tao intenso que te tire da zona de conforto de forma desconfortavel. É o preço é acessível o suficiente para que, se nunca viajaste assim, possas experimentar sem grande risco.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>44 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 4: Tailândia -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">4. Tailândia</h3>
+        <span class="badge badge-teal">DISPONÍVEL</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">1.750 EUR</span>
+        <span class="badge badge-teal">NOV-FEV</span>
+        <span class="badge badge-coral">ACESSÍVEL</span>
+        <span class="badge badge-gold">12-14 DIAS</span>
+      </div>
+      <p>A Tailândia é daqueles destinos que toda a gente conhece de nome mas poucos conhecem de verdade. Não me refiro a Phuket cheia de turistas ou a Full Moon Party em Koh Phangan. Refiro-me a Tailândia profunda: os templos dourados de Banguecoque ao nascer do sol, as montanhas de Chiang Mai com tribos que mantêm tradições milenares, as ilhas do sul com águas tao transparentes que vês o fundo a 10 metros.</p>
+      <p>O meu roteiro combina as três Tailandias: a urbana (Banguecoque — caótica, deliciosa, impossível de descrever), a cultural (Chiang Mai — templos, montanhas, serenidade) é a paradisíaca (ilhas do sul — praias, snorkeling, por-do-sol).</p>
+      <p>A comida de rua tailandesa e, para mim, a melhor do mundo. E custa 1-3 EUR por refeição. Um pad thai feito na rua a tua frente, num wok a mil graus, com ingredientes frescos, por 2 EUR. Nenhum restaurante português de comida tailandesa se apróxima disto.</p>
+      <p style="margin-bottom: 0;"><strong>Curiosidade:</strong> A Tailândia é o único país do Sudeste Asiático que nunca foi colonizado. A palavra "thai" significa "livre". E sente-se.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>45 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 5: Jordânia -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">5. Jordânia</h3>
+        <span class="badge badge-purple">EM PREPARAÇÃO</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">1.200-1.600 EUR</span>
+        <span class="badge badge-teal">MAR-MAI, SET-NOV</span>
+        <span class="badge badge-coral">ACESSÍVEL</span>
+        <span class="badge badge-gold">8-10 DIAS</span>
+      </div>
+      <p>Petra ao por-do-sol, iluminada por centenas de velas no chao — é uma imagem que fica contigo para sempre. A cidade rosa, esculpida na rocha há mais de 2.000 anos pelos Nabateus, é uma das Sete Maravilhas do Mundo Moderno. E não é exagero.</p>
+      <p>Mas a Jordânia é muito mais do que Petra. O deserto de Wadi Rum — onde foi filmado "The Martian" e "Lawrence da Arábia" — é uma paisagem de outro mundo. Dormir num campo tendado no meio do deserto, com o silencio mais absoluto que alguma vez ouviste é um céu com mais estrelas do que sabias ser possível.</p>
+      <p>E depois há o Mar Morto. O ponto mais baixo da superficie terrestre, onde flutuas sem esforco porque a concentração de sal é tão elevada que não é possível afundar. É uma experiência bizarra e inesquecivel.</p>
+      <p style="margin-bottom: 0;">A Jordânia é um país seguro, acolhedor e surpreendentemente acessível. Os Jordanos são famosos pela sua hospitalidade — é comum seres convidado para cha por completos desconhecidos.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>45 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 6: Vietname -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">6. Vietname</h3>
+        <span class="badge badge-purple">EM PREPARAÇÃO</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">1.500-1.900 EUR</span>
+        <span class="badge badge-teal">OUT-ABR</span>
+        <span class="badge badge-coral">ACESSÍVEL</span>
+        <span class="badge badge-gold">12-14 DIAS</span>
+      </div>
+      <p>O Vietname é um país que te conquista pelos sentidos. O cheiro de pho (sopa de massa) nas ruas de Hanoi as 6 da manhã. O verde intenso dos arrozais em terracos de Sapa. O azul impossível da baia de Há Long com milhares de ilhas de calcario. O caos organizado do transito de Ho Chi Minh, onde atravessar uma rua é um acto de fe.</p>
+      <p>E um dos países com melhor relação qualidade-preço do mundo. Come-se extraordinariamente bem por 2-5 EUR. Os hotéis de charme custam o que custa um hostel na Europa. E as experiências são de uma riqueza cultural difícil de igualar.</p>
+      <p style="margin-bottom: 0;">Hoi An — antiga cidade portuaria no centro do país — é frequentemente votada como uma das cidades mais bonitas da Ásia. Lanternas coloridas iluminam as ruas de noite, alfaiates fazem roupa a medida em 24 horas, e os restaurantes servem pratos que rivalizam com os melhores do mundo.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>46 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 7: Geórgia -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">7. Geórgia</h3>
+        <span class="badge badge-purple">EM ESTUDO</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">800-1.100 EUR</span>
+        <span class="badge badge-teal">MAI-OUT</span>
+        <span class="badge badge-coral">ACESSÍVEL A MODERADO</span>
+        <span class="badge badge-gold">8-10 DIAS</span>
+      </div>
+      <p>A Geórgia é o segredo mais bem guardado da Europa — ou da Ásia, dependendo de onde tracas a fronteira. E um país com 8.000 anos de história vinícola (sim, inventaram o vinho), montanhas do Caucaso que rivalizam com os Alpes, uma gastronomia absurdamente boa é uma hospitalidade que te faz sentir parte da familia.</p>
+      <p>Tbilisi é uma capital fascinante: ruelas estreitas com varandas em madeira, igrejas antigas, banhos termais sulfurosos que existem há seculos, é uma cena gastronómica e de vida nocturna que surpreende. Kazbegi — a 3 horas de carro por uma das estradas mais cenográficas do mundo — tem aquela igreja no topo da montanha que aparece em todas as fotos. Na vida real, é ainda mais impressionante.</p>
+      <p>E o preço? E absurdamente acessível. Comer fora na Geórgia — e comer bem, com vinho incluído — custa 8-15 EUR. Os vinhos georgianos, feitos em kvevri (anforas de barro enterradas), são Patrimonio da UNESCO.</p>
+      <p style="margin-bottom: 0;"><strong>Curiosidade:</strong> Não precisas de visto para visitar a Geórgia, e podes ficar até 1 ano.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>46 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 8: Omã -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">8. Omã</h3>
+        <span class="badge badge-purple">EM ESTUDO</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">1.200-1.500 EUR</span>
+        <span class="badge badge-teal">OUT-MAR</span>
+        <span class="badge badge-coral">ACESSÍVEL</span>
+        <span class="badge badge-gold">7-9 DIAS</span>
+      </div>
+      <p>Omã é a Arábia que ninguém conhece. Enquanto o Dubai é uma vitrina de luxo artificial é a Arábia Saudita comeca timidamente a abrir-se ao turismo, Omã tem tudo o que procuras num destino arabe — sem o turismo de massa, sem o artificialismo, com uma autenticidade que te desarma.</p>
+      <p>Muscat é uma capital limpa, organizada e bonita, com uma mesquita que é uma das mais impressionantes do mundo islâmico. O deserto de Wahiba Sands oferece a experiência de dunas sem as multidoes de Marrocos. E os wadis — vales com piscinas naturais de água cor de esmeralda, rodeados de rocha — são espetaculares.</p>
+      <p style="margin-bottom: 0;">Os Omani são um povo generoso e curioso. Não estao habituados ao turismo de massa, o que torna cada interacção genuina. E um país seguro — um dos mais seguros do Medio Oriente.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>47 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 9: Etiópia -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">9. Etiópia</h3>
+        <span class="badge badge-purple">EM ESTUDO</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">1.800-2.200 EUR</span>
+        <span class="badge badge-teal">OUT-MAR</span>
+        <span class="badge badge-coral">AVENTUREIRO</span>
+        <span class="badge badge-gold">10-14 DIAS</span>
+      </div>
+      <p>A Etiópia é o berco da humanidade. Literalmente — os restos humanos mais antigos do mundo foram encontrados aqui. E um país que não se parece com nenhum outro em África, nem com nenhum outro no mundo.</p>
+      <p>Lalibela tem 11 igrejas escavadas na rocha, construidas no seculo XII, e consideradas a "oitava maravilha do mundo". Imagina uma igreja inteira — com colunas, janelas, altar — esculpida directamente na rocha, de cima para baixo. Agora imagina 11 dessas igrejas, ligadas por tuneis subterrâneos. É real.</p>
+      <p>As Montanhas Simien são o "Grand Canyon de África" — planaltos a 4.000 metros de altitude, escarpas vertiginosas, e os babuinos gelada que só existem aqui. A depressao de Danakil é o ponto mais quente do planeta — com vulcoes activos, lagos de acido sulfúrico em cores neon e formacoes geológicas que parecem de outro planeta.</p>
+      <p style="margin-bottom: 0;">A Etiópia não é um destino confortável. E um destino transformador.</p>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>47 / 52</span>
+    </div>
+  </div>
+
+  <!-- Destination 10: Quirguistão -->
+  <div class="content-section">
+    <div class="destination-card no-break">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <h3 style="margin-top:0;">10. Quirguistão</h3>
+        <span class="badge badge-purple">EM ESTUDO</span>
+      </div>
+      <div class="destination-meta">
+        <span class="badge badge-gold">1.000-1.400 EUR</span>
+        <span class="badge badge-teal">JUN-SET</span>
+        <span class="badge badge-coral">AVENTUREIRO</span>
+        <span class="badge badge-gold">10-12 DIAS</span>
+      </div>
+      <p>O Quirguistão é o país dos nomadas. E não no sentido romântico de Instagram — no sentido real. Familias inteiras que vivem em yurts (tendas tradicionais), que movem os seus rebanhos pelas montanhas conforme as estações, que te convidam a entrar, a comer, a dormir, sem esperar nada em troca.</p>
+      <p>O lago Son Kul, a 3.016 metros de altitude, rodeado de montanhas verdes e yurts espalhados pela margem, é um dos sítios mais serenos que já visitei. Não há rede movel, não há electricidade, não há ruido. Há cavalos, há pastores, há um céu tao grande que te sentes pequeno — e isso faz-te bem.</p>
+      <p>Bishkek, a capital, é uma cidade surpreendente — com bazares enormes, parques verdes é uma cena gastronómica que mistura influencias persas, turcas e russas. E Osh, a segunda cidade, é uma das mais antigas da Ásia Central, com mais de 3.000 anos de história.</p>
+      <p style="margin-bottom: 0;"><strong>Curiosidade:</strong> O Quirguistão é um dos países mais baratos do mundo para viajar. Uma refeição completa custa 2-4 EUR. Uma noite num yurt com familia local custa 10-15 EUR, com jantar e pequeno-almoco incluídos.</p>
+    </div>
+
+    <p style="margin-top: 1.5rem;"><strong>Nota final sobre estes destinos:</strong> Alguns destes destinos já estao disponíveis nas minhas viagens de grupo. Outros estao em preparação. Fica atento — ou fala comigo para seres dos primeiros a saber quando abro um novo destino. Os meus grupos enchem depressa.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>47 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- CHAPTER 12                                    -->
+  <!-- ============================================= -->
+  <div class="chapter-opener page-break-before">
+    <span class="chapter-bg-num">12</span>
+    <span class="chapter-label">CAPÍTULO 12:</span>
+    <h2 class="chapter-title">O MAPA DA MARIA: DESTINOS<br>QUE SÓ EU OFEREÇO</h2>
+    <div class="gold-line gold-line-wide gold-line-center mt-2"></div>
+  </div>
+
+  <div class="content-section">
+    <p>Depois de leres o capítulo anterior, se calhar estás a pensar: "Isto é tudo muito bonito, mas como organizo uma viagem destas?" A resposta honesta e: sozinho, é possível — mas da trabalho. Vistos, vacinas, operadores locais, logística interna, segurança, seguros, voos, transfers. Cada destino tem as suas particularidades e os seus desafios.</p>
+
+    <p>E aqui que eu entro.</p>
+
+    <h3 class="chapter-subtitle">O Meu Portfolio Actual</h3>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Estado</th>
+          <th>Preço desde</th>
+          <th>O que inclui</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Socotra, Iemen</td><td style="color: var(--teal);">Disponível</td><td class="price">1.880 EUR</td><td>Voos, alojamento, refeições, guias, vistos, tudo</td></tr>
+        <tr><td>Uganda e Ruanda</td><td style="color: var(--teal);">Disponível</td><td class="price">2.950 EUR</td><td>Voos, alojamento, safaris, tracking gorilas, refeições</td></tr>
+        <tr><td>Marrocos Completo</td><td style="color: var(--teal);">Disponível</td><td class="price">870 EUR</td><td>Voos, alojamento, refeições, guias, noite no deserto</td></tr>
+        <tr><td>Tailândia</td><td style="color: var(--teal);">Disponível</td><td class="price">1.750 EUR</td><td>Voos, alojamento, actividades, refeições principais</td></tr>
+        <tr><td>Jordânia</td><td style="color: var(--gold);">Em preparação</td><td>A anunciar</td><td>—</td></tr>
+        <tr><td>Vietname</td><td style="color: var(--gold);">Em preparação</td><td>A anunciar</td><td>—</td></tr>
+        <tr><td>Geórgia</td><td style="color: var(--grey);">Em estudo</td><td>A anunciar</td><td>—</td></tr>
+        <tr><td>Omã</td><td style="color: var(--grey);">Em estudo</td><td>A anunciar</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <p>Todos os preços incluem voos desde Portugal. Todos os pacotes incluem alojamento, refeições principais, guias locais e transfers internos. Não há custos escondidos — o que esta no orçamento é o que pagas.</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>48 / 52</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3 class="chapter-subtitle">Porque e Que Estes Destinos</h3>
+
+    <p>Não escolho destinos ao acaso. Há criterios:</p>
+
+    <p><strong>Exclusividade.</strong> Não me interessa vender o que todas as agências vendem. Se queres ir a Cancun ou as Maldivas, há mil agências que te servem. Eu procuro destinos que as pessoas não conhecem — ou conhecem de nome mas não sabem como chegar lá.</p>
+
+    <p><strong>Valor real.</strong> Cada destino tem de oferecer uma experiência que justifique o investimento. Não em luxo — em intensidade. Em momentos que ficam na memória.</p>
+
+    <p><strong>Acessibilidade de preço.</strong> Trabalho destinos onde consigo preços que fazem sentido para portugueses com orçamentos normais. Não são viagens de elite — são viagens de qualidade a preços justos.</p>
+
+    <p><strong>Segurança.</strong> Não levo pessoas a sítios onde não me sinta segura. Cada destino e avaliado, cada operador e testado, cada itinerário e desenhado com a segurança como prioridade.</p>
+
+    <h3 class="chapter-subtitle">Como Funciona</h3>
+
+    <p>O processo é simples:</p>
+
+    <ol>
+      <li><strong>Falas comigo.</strong> WhatsApp, Instagram, email — como preferires.</li>
+      <li><strong>Explicas-me o que procuras.</strong> Que tipo de viagem, quando, com quem, que orçamento.</li>
+      <li><strong>Eu proponho.</strong> Com base no que me dizes, sugiro o destino é o grupo que melhor se adequa.</li>
+      <li><strong>Decides com calma.</strong> Sem pressão. Envio-te o orçamento detalhado, respondes as perguntas todas, e decides quando estiveres pronto.</li>
+      <li><strong>Eu trato de tudo.</strong> Voos, hotel, transfers, actividades, seguro, vistos — tu só apareces no aeroporto.</li>
+    </ol>
+
+    <blockquote>
+      "Queres ser dos primeiros a saber quando abro um novo destino? Segue-me no Instagram (@sairdacaixa.viagens) ou envia-me mensagem no WhatsApp (+351 933 096 770). Os meus grupos enchem rápido — quem chega primeiro, viaja primeiro."
+    </blockquote>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>49 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- EXTRAS DIVIDER                                -->
+  <!-- ============================================= -->
+  <div class="part-divider">
+    <span class="part-label">EXTRAS</span>
+    <h2 class="part-title">CHECKLISTS, ORÇAMENTO<br>E CONTACTOS</h2>
+    <div class="gold-line gold-line-center gold-line-wide mt-3"></div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- EXTRA: CHECKLIST DE VIAGEM                    -->
+  <!-- ============================================= -->
+  <div class="content-section page-break-before">
+    <h2 style="color: var(--gold); margin-bottom: 0.5rem;">Checklist de Viagem</h2>
+    <p style="color: var(--grey); font-style: italic; margin-bottom: 1.5rem;">Sair da Caixa Viagens — Página para imprimir e utilizar</p>
+
+    <div class="glass-card no-break">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">4 SEMANAS ANTES</h4>
+      <ul class="checklist">
+        <li>Verificar passaporte (validade superior a 6 meses após regresso)</li>
+        <li>Verificar se preciso de visto para o destino</li>
+        <li>Marcar consulta de medicina do viajante</li>
+        <li>Fazer ou renovar seguro de viagem</li>
+        <li>Abrir conta Revolut ou Wise (se ainda não tens)</li>
+      </ul>
+    </div>
+
+    <div class="glass-card no-break" style="margin-top: 1rem;">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">2 SEMANAS ANTES</h4>
+      <ul class="checklist">
+        <li>Fazer check-in online (quando disponível)</li>
+        <li>Preparar copias de documentos (digital + papel)</li>
+        <li>Carregar Revolut/Wise com orçamento + 20% de margem</li>
+        <li>Avisar o banco que vais viajar (evitar bloqueio de cartão)</li>
+        <li>Comprar adaptador de tomadas (se necessário)</li>
+      </ul>
+    </div>
+
+    <div class="glass-card no-break" style="margin-top: 1rem;">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">1 SEMANA ANTES</h4>
+      <ul class="checklist">
+        <li>Fazer a mala (reler capítulo 6 deste guia)</li>
+        <li>Verificar meteorologia do destino</li>
+        <li>Descarregar mapas offline no Google Maps</li>
+        <li>Guardar números de emergência no telemóvel</li>
+        <li>Partilhar itinerário com familiar de confiança</li>
+      </ul>
+    </div>
+
+    <div class="glass-card no-break" style="margin-top: 1rem;">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">NO DIA DA PARTIDA</h4>
+      <ul class="checklist">
+        <li>Passaporte na mala de mao</li>
+        <li>Carregador + power bank na mala de mao</li>
+        <li>Muda de roupa básica na mala de mao</li>
+        <li>Medicação na mala de mao</li>
+        <li>Check-in feito, cartão de embarque pronto (digital ou impresso)</li>
+      </ul>
+    </div>
+
+    <div class="glass-card no-break" style="margin-top: 1rem;">
+      <h4 style="color: var(--gold); margin-top: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;">NO DESTINO</h4>
+      <ul class="checklist">
+        <li>Guardar copia de documentos no cofre do hotel</li>
+        <li>Activar modo avião quando não precisas de dados</li>
+        <li>Fotografar placa do taxi ou Uber (por segurança)</li>
+        <li>Experimentar a comida local (reler capítulo 10)</li>
+        <li>Aproveitar. Sair da caixa. Viver.</li>
+      </ul>
+    </div>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>50 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- EXTRA: MODELO DE ORÇAMENTO                    -->
+  <!-- ============================================= -->
+  <div class="content-section page-break-before">
+    <h2 style="color: var(--gold); margin-bottom: 0.5rem;">Modelo de Orçamento de Viagem</h2>
+    <p style="color: var(--grey); font-style: italic; margin-bottom: 1.5rem;">Preenche antes de cada viagem para teres controlo total das despesas</p>
+
+    <div class="glass-card no-break" style="margin-bottom: 1.5rem;">
+      <p style="margin-bottom: 0.4rem;"><strong>Destino:</strong> ___________________</p>
+      <p style="margin-bottom: 0.4rem;"><strong>Duração:</strong> ___ dias</p>
+      <p style="margin-bottom: 0;"><strong>Número de pessoas:</strong> ___</p>
+    </div>
+
+    <table class="no-break">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Orçamento previsto</th>
+          <th>Custo real</th>
+          <th>Notas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Viagem de grupo (pacote)</td><td>_______ EUR</td><td>_______ EUR</td><td></td></tr>
+        <tr><td>Seguro de viagem</td><td>_______ EUR</td><td>_______ EUR</td><td></td></tr>
+        <tr><td>Visto(s)</td><td>_______ EUR</td><td>_______ EUR</td><td></td></tr>
+        <tr><td>Vacinas</td><td>_______ EUR</td><td>_______ EUR</td><td></td></tr>
+        <tr><td>Despesas diarias ( ___ dias x ___ EUR)</td><td>_______ EUR</td><td>_______ EUR</td><td></td></tr>
+        <tr><td>Souvenirs e compras</td><td>_______ EUR</td><td>_______ EUR</td><td></td></tr>
+        <tr><td>Transporte até ao aeroporto</td><td>_______ EUR</td><td>_______ EUR</td><td></td></tr>
+        <tr><td>Margem de segurança (+10%)</td><td>_______ EUR</td><td>_______ EUR</td><td></td></tr>
+        <tr><td><strong>TOTAL</strong></td><td><strong>_______ EUR</strong></td><td><strong>_______ EUR</strong></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top: 1.5rem;"><strong>Poupança face a agência tradicional:</strong> _______ EUR</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>51 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- EXTRA: OS CONTACTOS DA MARIA                  -->
+  <!-- ============================================= -->
+  <div class="content-section page-break-before">
+    <h2 style="color: var(--gold); margin-bottom: 0.5rem;">Os Contactos da Maria</h2>
+    <div class="gold-line gold-line-wide"></div>
+
+    <p>Obrigada por leres este guia até ao fim.</p>
+
+    <p>Se te foi útil, partilha com alguém que também mereca viajar melhor. Não custa nada — e pode mudar a próxima viagem de alguém.</p>
+
+    <p>E se quiseres descobrir destinos que 99% das agências não conhecem — a preços que não vais acreditar — estou a uma mensagem de distância.</p>
+
+    <div class="glass-card-accent glass-card" style="text-align: center; margin: 2rem 0;">
+      <p style="color: var(--gold); font-weight: 800; font-size: 1.2rem; margin-bottom: 0.3rem;">Maria José C. Sequeira</p>
+      <p style="color: var(--grey); margin-bottom: 1.5rem;">Consultora de Viagens de Grupo</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left;">
+        <div>
+          <p style="margin-bottom: 0.2rem;"><strong>WhatsApp</strong></p>
+          <a href="https://wa.me/351933096770" style="color: var(--teal); text-decoration: none; font-size: 0.9rem;">+351 933 096 770</a>
+        </div>
+        <div>
+          <p style="margin-bottom: 0.2rem;"><strong>Instagram</strong></p>
+          <a href="https://instagram.com/sairdacaixa.viagens" target="_blank" style="color: var(--teal); text-decoration: none; font-size: 0.9rem;">@sairdacaixa.viagens</a>
+        </div>
+        <div>
+          <p style="margin-bottom: 0.2rem;"><strong>Facebook</strong></p>
+          <a href="https://facebook.com/mariajose.sequeira.5" target="_blank" style="color: var(--teal); text-decoration: none; font-size: 0.9rem;">Maria José Sequeira</a>
+        </div>
+        <div>
+          <p style="margin-bottom: 0.2rem;"><strong>LinkedIn</strong></p>
+          <a href="https://linkedin.com/in/maria-jose-sequeira-58a81b48" target="_blank" style="color: var(--teal); text-decoration: none; font-size: 0.9rem;">Maria José Sequeira</a>
+        </div>
+        <div>
+          <p style="margin-bottom: 0.2rem;"><strong>Email</strong></p>
+          <a href="mailto:mjcsequeira@gmail.com" style="color: var(--teal); text-decoration: none; font-size: 0.9rem;">mjcsequeira@gmail.com</a>
+        </div>
+        <div>
+          <p style="margin-bottom: 0.2rem;"><strong>Website</strong></p>
+          <a href="https://vooviver-mj.vercel.app/" target="_blank" style="color: var(--teal); text-decoration: none; font-size: 0.9rem;">vooviver-mj.vercel.app</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <a href="https://vooviver-mj.vercel.app/" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.8rem; background: var(--gold); color: var(--bg); font-weight: 800; font-size: 0.9rem; border-radius: 8px; text-decoration: none; box-shadow: 0 0 20px var(--gold-glow);">
+          Visitar o Site &rarr;
+        </a>
+      </div>
+    </div>
+
+    <p style="margin-top: 1rem; text-align: center; font-size: 0.85rem; color: var(--grey);">Sair da Caixa Viagens<br>Associada VooViver — RNAVT N.12366</p>
+
+    <div class="page-footer">
+      <span>SAIR DA CAIXA VIAGENS &middot; O GUIA QUE A TUA AGÊNCIA NUNCA TE DEU</span>
+      <span>52 / 52</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- BACK COVER                                    -->
+  <!-- ============================================= -->
+  <div class="back-cover">
+    <img src="/assets/logo/sair-da-caixa-transparent-512.png" alt="Sair da Caixa Viagens" style="height: 200px; width: auto; margin-bottom: 2rem;" />
+
+    <h2 style="font-size: 1.8rem; font-weight: 900; margin-bottom: 0.3rem;">O Guia que a Tua Agência</h2>
+    <h2 style="font-size: 1.8rem; font-weight: 900; color: var(--gold); margin-bottom: 0.5rem; margin-top: 0;">Nunca Te Deu</h2>
+    <p style="color: var(--grey); font-size: 0.95rem; margin-bottom: 2rem;">Tudo o que precisas de saber para viajar melhor, mais barato e sem stress</p>
+
+    <div class="gold-line gold-line-center gold-line-wide" style="margin-bottom: 2.5rem;"></div>
+
+    <div style="text-align: center; max-width: 400px; margin: 0 auto 2rem;">
+      <p style="margin-bottom: 0.8rem;"><strong>WhatsApp:</strong> <a href="https://wa.me/351933096770" style="color: var(--teal); text-decoration: none;">+351 933 096 770</a></p>
+      <p style="margin-bottom: 0.8rem;"><strong>Instagram:</strong> <a href="https://instagram.com/sairdacaixa.viagens" target="_blank" style="color: var(--teal); text-decoration: none;">@sairdacaixa.viagens</a></p>
+      <p style="margin-bottom: 0.8rem;"><strong>Facebook:</strong> <a href="https://facebook.com/mariajose.sequeira.5" target="_blank" style="color: var(--teal); text-decoration: none;">Maria José Sequeira</a></p>
+      <p style="margin-bottom: 0.8rem;"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/maria-jose-sequeira-58a81b48" target="_blank" style="color: var(--teal); text-decoration: none;">Maria José Sequeira</a></p>
+      <p style="margin-bottom: 0.8rem;"><strong>Email:</strong> <a href="mailto:mjcsequeira@gmail.com" style="color: var(--teal); text-decoration: none;">mjcsequeira@gmail.com</a></p>
+    </div>
+
+    <a href="https://vooviver-mj.vercel.app/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 2rem; background: var(--gold); color: var(--bg); font-family: 'Inter', sans-serif; font-weight: 800; font-size: 0.95rem; border-radius: 8px; text-decoration: none; box-shadow: 0 0 24px var(--gold-glow); margin-bottom: 2.5rem; transition: 0.25s ease;">
+      Visita o Meu Site &rarr; vooviver-mj.vercel.app
+    </a>
+
+    <blockquote style="border: none; background: transparent; padding: 0; font-size: 1.1rem; color: var(--gold); max-width: 450px; margin: 0 auto 2.5rem;">
+      "A vida é demasiado curta para viagens mediocres. Sai da caixa."
+    </blockquote>
+
+    <p class="font-mono" style="font-size: 0.55rem; color: var(--grey2); letter-spacing: 0.06em;">
+      Associada VooViver &mdash; RNAVT N.12366
+    </p>
+
+    <p class="font-mono" style="font-size: 0.5rem; color: var(--grey2); letter-spacing: 0.04em; margin-top: 1rem;">
+      Guia v1.0 &mdash; 52 páginas de valor real &mdash; Sair da Caixa Viagens
+    </p>
+  </div>
+
+</PrintLayout>
