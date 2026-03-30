@@ -24,3 +24,26 @@ pnpm-debug.log*
 .idea/
 
 .vercel
+
+# Environment & Secrets (AIOX)
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Dependencies (AIOX)
+node_modules
+
+# Build & Logs (AIOX)
+build/
+*.log
+logs/
+
+# IDE & OS (AIOX)
+Thumbs.db
+*.swp
+
+# AIOX Local (AIOX)
+.aiox-core/local/
+.claude/settings.local.json
+.aiox/install-log.txt
